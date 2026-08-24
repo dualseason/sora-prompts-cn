@@ -50,7 +50,7 @@ body.dark-theme .book-card,
 body.dark-theme .book-article,
 body.dark-theme article { background: transparent !important; }
 body.dark-theme .book-article code,
-body.dark-theme article code { background: #3a3b40 !important; color: #f2c4a5 !important; }
+body.dark-theme article code { background: transparent !important; color: #f2c4a5 !important; }
 body.dark-theme .book-article a,
 body.dark-theme article a,
 body.dark-theme .home-doc-links a { color: var(--book-green) !important; }
