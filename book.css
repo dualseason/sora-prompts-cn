@@ -48,7 +48,7 @@ body.dark-theme .hero,
 body.dark-theme .book-hero { background: var(--book-page) !important; }
 body.dark-theme .book-card,
 body.dark-theme .book-article,
-body.dark-theme article { background: var(--book-page) !important; }
+body.dark-theme article { background: transparent !important; }
 body.dark-theme .book-article code,
 body.dark-theme article code { background: #3a3b40 !important; color: #f2c4a5 !important; }
 body.dark-theme .book-article a,
