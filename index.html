@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="中文电影级 Sora 视频提示词教程与 250+ 条提示词合集。">
+  <title>Sora 电影级视频提示词教程</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root { --ink:#17202a; --muted:#65717d; --paper:#f7f8f5; --line:#dfe4df; --accent:#176b5b; --accent-soft:#e0f0eb; --warm:#d56b3d; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.75 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+    a { color:var(--accent); }
+    .topbar { border-bottom:1px solid var(--line); background:#fff; }
+    .topbar-inner, main { width:min(1160px, calc(100% - 40px)); margin:auto; }
+    .topbar-inner { min-height:64px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { color:var(--ink); font-weight:750; letter-spacing:.02em; text-decoration:none; }
+    .top-link { color:var(--muted); text-decoration:none; font-size:14px; }
+    .hero { padding:72px 0 58px; border-bottom:1px solid var(--line); background:#fff; }
+    .hero-grid { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr); gap:70px; align-items:end; }
+    .eyebrow { margin:0 0 16px; color:var(--warm); font-size:13px; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { max-width:760px; margin:0; font-size:clamp(38px,6vw,72px); line-height:1.08; letter-spacing:-.03em; }
+    .hero-copy { max-width:650px; margin:22px 0 0; color:var(--muted); font-size:18px; }
+    .hero-aside { padding-left:24px; border-left:3px solid var(--accent); }
+    .hero-aside strong { display:block; margin-bottom:8px; font-size:20px; }
+    .hero-aside p { margin:0; color:var(--muted); }
+    .layout { display:grid; grid-template-columns:240px minmax(0,1fr); gap:64px; padding-top:52px; }
+    aside { position:sticky; top:20px; align-self:start; }
+    aside h2 { margin:0 0 14px; font-size:14px; }
+    aside a { display:block; padding:5px 0; color:var(--muted); font-size:14px; text-decoration:none; }
+    aside a:hover { color:var(--accent); }
+    .intro { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:48px; }
+    .intro-item { padding:18px; background:var(--accent-soft); border-top:3px solid var(--accent); }
+    .intro-item b { display:block; margin-bottom:6px; }
+    .intro-item span { color:#4f625d; font-size:14px; }
+    article { min-width:0; }
+    article h1 { display:none; }
+    article h2 { margin:52px 0 14px; padding-top:14px; border-top:1px solid var(--line); font-size:30px; line-height:1.25; }
+    article h3 { margin-top:32px; font-size:22px; }
+    article h4 { margin-top:24px; font-size:18px; }
+    article p, article ul, article ol { max-width:820px; }
+    article code { padding:2px 5px; background:#eef1ee; border-radius:3px; }
+    article pre { overflow:auto; padding:18px 20px; color:#edf4ef; background:#182b2a; border-left:4px solid var(--warm); border-radius:4px; }
+    article pre code { padding:0; color:inherit; background:none; }
+    article blockquote { margin:24px 0; padding:12px 18px; color:#4f625d; background:var(--accent-soft); border-left:3px solid var(--accent); }
+    .loading { padding:30px 0; color:var(--muted); }
+    footer { margin-top:80px; padding:28px 0 48px; color:var(--muted); border-top:1px solid var(--line); font-size:14px; }
+    @media (max-width:760px) {
+      .topbar-inner, main { width:min(100% - 28px, 1160px); }
+      .hero { padding:48px 0 40px; }
+      .hero-grid, .layout { grid-template-columns:1fr; gap:28px; }
+      .hero-aside { padding:16px 0 0; border-top:3px solid var(--accent); border-left:0; }
+      aside { position:static; display:none; }
+      .intro { grid-template-columns:1fr; margin-bottom:34px; }
+      article h2 { font-size:25px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./">Sora 提示词教程</a>
+      <a class="top-link" href="./Sora-prompts.md">查看原文档</a>
+    </div>
+  </header>
+  <section class="hero">
+    <main class="hero-grid">
+      <div>
+        <p class="eyebrow">Cinematic Prompting / Sora</p>
+        <h1>把想法写成<br>电影画面</h1>
+        <p class="hero-copy">一份面向中文创作者的 Sora 视频提示词教程：从景别、镜头运动到灯光和叙事结构，并附带 250+ 条可直接使用的英文提示词。</p>
+      </div>
+      <div class="hero-aside">
+        <strong>先掌握镜头，再描述故事</strong>
+        <p>好的提示词不只是堆砌形容词，而是把主体、动作、镜头、光线和情绪组织成一个可执行的视觉计划。</p>
+      </div>
+    </main>
+  </section>
+  <main class="layout">
+    <aside>
+      <h2>本页导航</h2>
+      <a href="#guide">教程正文</a>
+      <a href="#prompt-list">提示词合集</a>
+      <a href="#tips">最佳实践</a>
+    </aside>
+    <section>
+      <div class="intro" id="guide">
+        <div class="intro-item"><b>01 / 景别</b><span>决定观众看见多少，以及注意什么。</span></div>
+        <div class="intro-item"><b>02 / 运动</b><span>让镜头承担节奏、方向和情绪。</span></div>
+        <div class="intro-item"><b>03 / 细节</b><span>用灯光、色彩和环境完成叙事。</span></div>
+      </div>
+      <article id="content"><p class="loading">正在载入中文教程……</p></article>
+      <div id="prompt-list"></div>
+    </section>
+  </main>
+  <footer><main>提示词代码块保留英文，方便直接复制到 Sora 使用。内容以 Creative Commons BY-SA 4.0 许可。</main></footer>
+  <script>
+    fetch('./Sora-prompts.md')
+      .then(function (response) { if (!response.ok) throw new Error('文档加载失败'); return response.text(); })
+      .then(function (markdown) {
+        marked.setOptions({ headerIds: true, mangle: false });
+        document.getElementById('content').innerHTML = marked.parse(markdown);
+      })
+      .catch(function () {
+        document.getElementById('content').innerHTML = '<p>教程加载失败，请直接打开 <a href="./Sora-prompts.md">中文 Markdown 文档</a>。</p>';
+      });
+  </script>
+</body>
+</html>
