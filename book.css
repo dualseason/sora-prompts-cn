@@ -23,6 +23,11 @@ body.dark-theme {
   --card-bg: #292a2e;
   --prompt-bg: #303136;
   --border-color: #4a4b50;
+  --bg-color: #202124;
+  --card-hover: #35363b;
+  --accent-color: #9bc4b2;
+  --tag-color: #e6a17f;
+  --prompt-border: #9bc4b2;
   --book-shadow: 0 18px 50px rgba(0, 0, 0, .2);
 }
 
