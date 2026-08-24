@@ -75,7 +75,7 @@ nav a:hover { color: var(--book-green) !important; }
 .book-hero,
 .course-head,
 .hero {
-  background: var(--book-page) !important;
+  background: var(--book-paper) !important;
   border-bottom: 1px solid var(--book-line) !important;
 }
 .book-hero-inner,
@@ -115,10 +115,10 @@ aside a:hover { color: var(--book-green) !important; }
 .book-article,
 article {
   min-width: 0 !important;
-  background: var(--book-page) !important;
-  padding: 48px 62px 76px !important;
-  box-shadow: var(--book-shadow) !important;
-  border: 1px solid rgba(222, 219, 209, .7) !important;
+  background: transparent !important;
+  padding: 0 0 76px !important;
+  box-shadow: none !important;
+  border: 0 !important;
 }
 .book-article h2,
 article h2 { margin: 52px 0 18px !important; padding-top: 24px !important; border-top: 1px solid var(--book-line) !important; color: var(--book-ink) !important; font-family: "Noto Serif SC", "Songti SC", serif !important; font-size: 27px !important; line-height: 1.55 !important; }
@@ -227,7 +227,7 @@ footer { background: transparent !important; border-top: 1px solid var(--book-li
   .book-topbar-inner, .site-header-inner, .topbar-inner, .book-hero-inner, .course-head > main, .hero-grid, .book-layout, .layout, .book-shelf { width: min(100% - 28px, 1080px) !important; }
   .book-layout, .layout { display: block !important; }
   .book-toc, aside { display: none !important; }
-  .book-article, article { padding: 30px 22px 52px !important; box-shadow: none !important; }
+  .book-article, article { padding: 0 0 52px !important; box-shadow: none !important; }
   .book-shelf-grid { grid-template-columns: 1fr; }
   .book-card { min-height: 260px; padding: 24px; }
   .home-hero-grid { grid-template-columns:1fr; gap:28px; }
