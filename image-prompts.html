@@ -6,66 +6,80 @@
     <title>图片镜头提示词图库</title>
     <style>
         :root {
-            --bg-color: #f4f7f9;
+            --bg-color: #f7f8f5;
             --card-bg: #ffffff;
-            --card-hover: #e3f2fd;
-            --text-color: #333;
-            --border-color: #bbdefb;
-            --accent-color: #004d99;
-            --tag-color: #e65100;
-            --prompt-bg: #e3f2fd;
-            --prompt-border: #2196f3;
+            --card-hover: #e4f0eb;
+            --text-color: #17202a;
+            --muted-color: #65717d;
+            --border-color: #dfe4df;
+            --accent-color: #176b5b;
+            --tag-color: #bd5a32;
+            --prompt-bg: #ffffff;
+            --prompt-border: #176b5b;
         }
         /* Fix: change .dark-mode to body.dark-mode */
         body.dark-mode {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --card-hover: #2a2a2a;
-            --text-color: #f0f0f0;
-            --border-color: #333;
-            --accent-color: #bb86fc;
-            --tag-color: #ff7043;
-            --prompt-bg: #2d2d2d;
-            --prompt-border: #bb86fc;
+            --bg-color: #172321;
+            --card-bg: #20312e;
+            --card-hover: #29403b;
+            --text-color: #edf4ef;
+            --muted-color: #b5c5bf;
+            --border-color: #3d5650;
+            --accent-color: #9bd1bf;
+            --tag-color: #f1a47e;
+            --prompt-bg: #243a35;
+            --prompt-border: #9bd1bf;
         }
         /* Basic Reset and Styles */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
+            line-height: 1.8;
             transition: background-color 0.3s, color 0.3s;
         }
+        .site-header { border-bottom: 1px solid var(--border-color); background: var(--card-bg); }
+        .site-header-inner { max-width: 1160px; min-height: 68px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+        .site-brand, .site-back { color: var(--text-color); text-decoration: none; }
+        .site-brand { font-weight: 750; white-space: nowrap; }
+        .site-back { color: var(--muted-color); font-size: 14px; }
         .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 15px;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 54px 24px 80px;
         }
         h1 {
             color: var(--accent-color);
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--accent-color);
+            max-width: 760px;
+            margin: 0 0 12px;
+            font-size: clamp(34px, 5vw, 58px);
+            line-height: 1.25;
+            letter-spacing: 0;
         }
+        .intro { max-width: 720px; margin: 0 0 40px; color: var(--muted-color); font-size: 18px; }
         /* Search Bar */
         .search-container {
-            margin: 20px 0;
-            text-align: center;
+            margin: 28px 0 44px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
         }
         #search {
             width: 100%;
-            max-width: 500px;
-            padding: 10px;
-            border-radius: 5px;
+            max-width: 560px;
+            padding: 13px 16px;
+            border-radius: 4px;
             border: 1px solid var(--border-color);
             font-size: 16px;
+            background: var(--card-bg);
+            color: var(--text-color);
         }
         /* Dark Mode Toggle */
         .dark-mode-toggle {
             position: fixed;
-            top: 20px;
+            top: 16px;
             right: 20px;
             z-index: 9999;
         }
@@ -73,37 +87,36 @@
             background: var(--accent-color);
             color: white;
             border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
+            padding: 8px 14px;
+            border-radius: 4px;
             cursor: pointer;
         }
         /* Category Styling */
         .category {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 48px;
+            padding: 0 0 34px;
+            border-bottom: 1px solid var(--border-color);
         }
         .category-title {
-            color: var(--tag-color);
-            border-bottom: 2px solid var(--tag-color);
+            color: var(--text-color);
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 10px;
             margin-bottom: 20px;
-            font-size: 1.8em;
+            font-size: 1.55em;
+            line-height: 1.5;
         }
         /* Prompt Card Styling */
         .prompt-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
         }
         .prompt-card {
             background-color: var(--prompt-bg);
             border: 1px solid var(--border-color);
             border-left: 5px solid var(--prompt-border);
             border-radius: 4px;
-            padding: 15px;
+            padding: 16px;
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
             position: relative;
@@ -121,15 +134,15 @@
             word-break: break-word;
         }
         .prompt-description {
-            font-size: 0.9em;
-            color: var(--text-color);
+            font-size: 14px;
+            color: var(--muted-color);
             margin-top: 10px;
             padding-top: 5px;
             border-top: 1px dashed var(--border-color);
         }
         .prompt-image {
             width: 100%;
-            max-width: 350px;
+            max-width: 100%;
             height: auto;
             object-fit: auto;
             border-radius: 4px;
@@ -220,15 +233,32 @@
             background-color: #f44336;
             color: white;
         }
+        @media (max-width: 760px) {
+            .site-header-inner { min-height: 60px; padding: 0 16px; }
+            .site-back { font-size: 13px; }
+            .container { padding: 38px 16px 56px; }
+            .intro { font-size: 16px; }
+            .search-container { align-items: stretch; flex-direction: column; }
+            #search { max-width: none; }
+            .dark-mode-toggle { top: 74px; right: 16px; }
+            .category { margin-bottom: 38px; }
+            .prompt-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="site-brand" href="./">Sora 提示词教程</a>
+            <a class="site-back" href="./">返回视频教程</a>
+        </div>
+    </header>
     <div class="dark-mode-toggle">
         <button id="dark-mode-toggle">深色模式</button>
     </div>
     <div class="container">
-        <p><a href="./">返回 Sora 视频提示词教程</a></p>
         <h1>图片生成镜头提示词图库</h1>
+        <p class="intro">按镜头角度、景别、构图、运动和透视方式整理的图片生成参考。点击任意卡片即可复制中文提示词。</p>
         <div class="search-container">
             <input type="text" id="search" placeholder="搜索提示词……">
         </div>
