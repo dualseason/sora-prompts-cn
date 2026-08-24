@@ -32,6 +32,7 @@ body.dark-theme {
 }
 
 html { scroll-behavior: smooth; overflow-x: hidden; }
+article h2, article h3 { scroll-margin-top: 92px; }
 body {
   background: var(--book-paper) !important;
   color: var(--book-ink) !important;

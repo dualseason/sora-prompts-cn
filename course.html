@@ -50,7 +50,7 @@
       th, td { padding:8px; }
     }
   </style>
-  <link rel="stylesheet" href="./book.css?v=10">
+  <link rel="stylesheet" href="./book.css?v=11">
 </head>
 <body>
   <header class="plain-header"><div class="plain-header-inner">
@@ -82,19 +82,25 @@
       if (!response.ok) throw new Error('课程加载失败');
       return response.text();
     }).then(function (markdown) {
-      marked.setOptions({ headerIds: true, mangle: false });
+      marked.setOptions({ mangle: false });
       document.getElementById('content').innerHTML = marked.parse(markdown);
       const toc = document.getElementById('toc');
-      document.querySelectorAll('#content h2, #content h3').forEach(function (heading) {
+      document.querySelectorAll('#content h2, #content h3').forEach(function (heading, index) {
+        heading.id = 'section-' + (index + 1);
         const link = document.createElement('a');
         link.href = '#' + heading.id;
         link.textContent = heading.textContent;
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', '#' + heading.id);
+        });
         toc.appendChild(link);
       });
     }).catch(function () {
       document.getElementById('content').innerHTML = '<p>课程加载失败，请直接打开 <a href="./' + doc + '">' + doc + '</a>。</p>';
     });
   </script>
-  <script src="./theme.js?v=3"></script>
+  <script src="./theme.js?v=4"></script>
 </body>
 </html>

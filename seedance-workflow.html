@@ -40,7 +40,7 @@
     footer { padding:28px 0 48px; color:var(--muted); border-top:1px solid var(--line); font-size:14px; }
     @media (max-width:760px) { .bar, main { width:min(100% - 28px, 1120px); } .bar { align-items:flex-start; padding:15px 0; } nav { gap:6px 14px; } .hero { padding:42px 0 34px; } .layout { grid-template-columns:1fr; gap:0; } aside { display:none; } article h2 { font-size:25px; } th, td { padding:8px; } }
   </style>
-  <link rel="stylesheet" href="./book.css?v=10">
+  <link rel="stylesheet" href="./book.css?v=11">
 </head>
 <body>
   <header class="plain-header"><div class="plain-header-inner">
@@ -59,19 +59,25 @@
       if (!response.ok) throw new Error('总览加载失败');
       return response.text();
     }).then(function (markdown) {
-      marked.setOptions({ headerIds: true, mangle: false });
+      marked.setOptions({ mangle: false });
       document.getElementById('content').innerHTML = marked.parse(markdown);
       var toc = document.getElementById('toc');
-      document.querySelectorAll('#content h2, #content h3').forEach(function (heading) {
+      document.querySelectorAll('#content h2, #content h3').forEach(function (heading, index) {
+        heading.id = 'section-' + (index + 1);
         var link = document.createElement('a');
         link.href = '#' + heading.id;
         link.textContent = heading.textContent;
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', '#' + heading.id);
+        });
         toc.appendChild(link);
       });
     }).catch(function () {
       document.getElementById('content').innerHTML = '<p>总览加载失败，请打开 <a href="./seedance-workflow.md">源文档</a>。</p>';
     });
   </script>
-  <script src="./theme.js?v=3"></script>
+  <script src="./theme.js?v=4"></script>
 </body>
 </html>
