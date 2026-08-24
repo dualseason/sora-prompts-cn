@@ -1,162 +1,162 @@
-# 300+ Cinematic Sora Video Prompts
+# 300+ 条电影级 Sora 视频提示词
 
-## Introduction to Cinematic Sora Video Prompts
+## 电影级 Sora 视频提示词简介
 
-Welcome to the **Cinematic Sora Video Prompts** tutorial! This guide is meticulously crafted to empower creators, filmmakers, and content enthusiasts to harness the full potential of [Sora](https://sora.com), an advanced AI-powered video generation tool. 
+欢迎阅读 **电影级 Sora 视频提示词** 教程！本指南专为创作者、电影制作人和内容爱好者打造，帮助你充分发挥 [Sora](https://sora.com) 这一先进 AI 视频生成工具的能力。
 
-By transforming textual descriptions into dynamic, visually compelling video content, Sora bridges the gap between imagination and reality, enabling the creation of professional-grade cinematic experiences without the need for extensive technical expertise.
+Sora 可以将文字描述转换为动态且富有视觉表现力的视频内容，连接想象与现实。即使没有深厚的技术背景，也能创作出专业级的电影体验。
 
-### What This Tutorial Offers
+### 本教程内容
 
-This tutorial delves deep into the art and science of crafting effective video prompts tailored for Sora. Whether you're aiming to produce a short film, an engaging advertisement, or a captivating social media clip, understanding the nuances of cinematic language is crucial. We break down essential elements such as camera shots, movements, lighting, and color schemes, providing you with the knowledge to articulate your vision precisely.
+本教程深入讲解如何为 Sora 编写有效的视频提示词。无论你想制作短片、广告还是社交媒体视频，理解电影语言的细节都很重要。我们将拆解镜头景别、镜头运动、灯光和色彩方案等关键元素，帮助你准确表达创意。
 
-### How It Works
+### 工作原理
 
-Sora leverages sophisticated natural language processing and machine learning algorithms to interpret and visualize your prompts. By inputting detailed descriptions that incorporate specific cinematic techniques, you guide Sora in generating videos that align closely with your creative intent. This tutorial teaches you how to structure your prompts effectively, ensuring clarity and specificity to achieve the desired outcomes.
+Sora 利用自然语言处理和机器学习算法理解并呈现提示词。通过输入包含具体电影技法的详细描述，你可以引导 Sora 生成符合创作意图的视频。本教程将介绍如何组织提示词，让描述清晰、具体并更接近预期效果。
 
-### Enhancing Your Video Outputs
+### 提升视频效果
 
-By mastering the techniques outlined in this guide, you can significantly elevate the quality of your video projects. You'll learn how to:
+掌握本指南中的技巧后，你可以显著提升视频项目的质量。你将学会：
 
-- **Define Clear Visual Narratives**: Craft prompts that convey a coherent and engaging story.
-- **Utilize Professional Cinematic Techniques**: Incorporate industry-standard camera shots and movements to add depth and dynamism.
-- **Align Mood and Tone**: Use lighting, color schemes, and background details to set the emotional tone of your videos.
-- **Optimize for Sora's AI**: Understand how to communicate your vision in a way that Sora can accurately interpret and execute.
+- **构建清晰的视觉叙事**：编写能够传达连贯且引人入胜故事的提示词。
+- **运用专业电影技法**：加入行业常用的景别和镜头运动，增强画面的层次与动感。
+- **统一情绪与基调**：使用灯光、色彩方案和背景细节设定视频的情绪。
+- **适配 Sora AI**：理解如何表达创意，让 Sora 更准确地理解和执行。
 
-### Why Choose This Tutorial
+### 为什么选择本教程
 
-Creating high-quality videos can be resource-intensive, often requiring specialized equipment and expertise. This tutorial democratizes the filmmaking process by equipping you with the skills to generate stunning videos using Sora's intuitive platform. Whether you're a seasoned filmmaker looking to streamline your workflow or a novice eager to bring your ideas to life, this guide provides the tools and insights needed to produce visually impressive content effortlessly.
+制作高质量视频通常需要专业设备、技能和大量资源。本教程通过讲解 Sora 平台的使用方法，让更多人能够完成电影创作。无论你是希望优化工作流程的资深创作者，还是想把想法变成现实的新手，都能从中获得制作高质量内容所需的工具和思路。
 
-Embark on your cinematic journey with confidence and creativity. Let **Cinematic Sora Video Prompts** be your companion in transforming ideas into mesmerizing visual stories.
+带着信心与创意开启电影创作之旅，让 **电影级 Sora 视频提示词** 陪伴你把想法变成令人印象深刻的视觉故事。
 
-## Table of Contents
+## 目录
 
-1. [Introduction to Sora](#1-introduction-to-sora)
-2. [Prerequisites](#2-prerequisites)
-3. [Getting Started with Sora](#3-getting-started-with-sora)
-4. [Understanding Cinematic Language](#4-understanding-cinematic-language)
-5. [Aligning Mood and Message with Camera Shots](#5-aligning-mood-and-message-with-camera-shots)
-6. [Enhancing Narratives with Camera Movements](#6-enhancing-narratives-with-camera-movements)
-7. [Combining Shots and Movements in Prompts](#7-combining-shots-and-movements-in-prompts)
-8. [Incorporating Contextual Details](#8-incorporating-contextual-details)
-9. [Best Practices and Tips](#9-best-practices-and-tips)
-10. [Common Mistakes to Avoid](#10-common-mistakes-to-avoid)
-11. [Advanced Techniques](#11-advanced-techniques)
-12. [Troubleshooting](#12-troubleshooting)
-13. [FAQ](#13-faq)
-14. [Visual Aids](#14-visual-aids)
-15. [Conclusion](#15-conclusion)
-16. [Additional Resources](#16-additional-resources)
-17. [License and Contribution Guidelines](#17-license-and-contribution-guidelines)
-18. [Appendix: Collection of Video Prompts](#18-appendix-collection-of-video-prompts)
-
----
-
-## 1. Introduction to Sora
-
-[Sora](https://sora.com) is an AI-powered video generation tool developed by OpenAI that converts textual prompts into dynamic video content. By leveraging advanced natural language processing and cinematic techniques, Sora enables creators to produce professional-quality videos with ease. This tutorial will guide you through crafting effective prompts to maximize the potential of Sora, ensuring your videos are immersive and visually engaging.
+1. [Sora 简介](#1-sora-简介)
+2. [准备工作](#2-准备工作)
+3. [开始使用 Sora](#3-开始使用-sora)
+4. [理解电影语言](#4-理解电影语言)
+5. [用镜头景别匹配情绪与信息](#5-用镜头景别匹配情绪与信息)
+6. [用镜头运动增强叙事](#6-用镜头运动增强叙事)
+7. [组合提示词中的景别与运动](#7-组合提示词中的景别与运动)
+8. [加入环境细节](#8-加入环境细节)
+9. [最佳实践与技巧](#9-最佳实践与技巧)
+10. [应避免的常见错误](#10-应避免的常见错误)
+11. [进阶技巧](#11-进阶技巧)
+12. [故障排查](#12-故障排查)
+13. [常见问题](#13-常见问题)
+14. [视觉辅助](#14-视觉辅助)
+15. [结语](#15-结语)
+16. [更多资源](#16-更多资源)
+17. [许可证与贡献指南](#17-许可证与贡献指南)
+18. [附录：视频提示词合集](#18-附录视频提示词合集)
 
 ---
 
-## 2. Prerequisites
+## 1. Sora 简介
 
-Before you begin, ensure you have the following:
-
-- **Basic Understanding of Cinematic Terms**: Familiarity with camera shots and movements will help you follow along.
-- **Access to Sora**: Ensure you have an active [Sora account](https://sora.com/signup) and the necessary permissions to generate videos.
-- **Text Editor**: To draft and refine your prompts effectively (e.g., VS Code, Sublime Text, or even a simple text editor).
+[Sora](https://sora.com) 是 OpenAI 开发的 AI 视频生成工具，可以将文字提示词转换为动态视频内容。借助先进的自然语言处理能力和电影技法，创作者可以更轻松地制作专业质量的视频。本教程将带你编写有效提示词，充分发挥 Sora 的潜力，让视频更具沉浸感和视觉吸引力。
 
 ---
 
-## 3. Getting Started with Sora
+## 2. 准备工作
 
-Follow these steps to begin creating your cinematic videos with Sora:
+开始之前，请准备好以下内容：
 
-1. **Log In to Your Sora Account**:
-    - Visit the [Sora website](https://sora.com) and log in with your credentials.
-    - If you don’t have an account, [sign up here](https://sora.com/signup).
-
-2. **Navigate to the Video Generation Section**:
-    - From the dashboard, select “Create New Video.”
-
-3. **Enter Your Prompt**:
-    - In the prompt input field, type your cinematic prompt following the guidelines from this tutorial.
-
-4. **Configure Settings (Optional)**:
-    - Adjust video length, resolution, and other settings as needed to suit your project's requirements.
-
-5. **Generate Video**:
-    - Click on the “Generate” button and wait for Sora to process your prompt. This may take a few moments depending on the complexity of your prompt.
-
-6. **Review and Refine**:
-    - Once the video is generated, review it carefully.
-    - If necessary, iterate on your prompt to fine-tune the video until it meets your desired outcome.
+- **电影术语基础**：熟悉镜头景别和运动方式有助于理解本教程。
+- **Sora 使用权限**：确保拥有有效的 [Sora 账号](https://sora.com/signup) 以及生成视频所需的权限。
+- **文本编辑器**：用于编写和完善提示词，例如 VS Code、Sublime Text 或普通文本编辑器。
 
 ---
 
-## 4. Understanding Cinematic Language
+## 3. 开始使用 Sora
 
-Before writing a Sora prompt, familiarize yourself with two key components of cinematic language:
+按照以下步骤开始使用 Sora 制作电影级视频：
 
-- **Camera Shots**: Define the frame’s composition and the relationship between the subject and the viewer.
-  - *Examples*: Close-Up (CU), Over-the-Shoulder (OTS), High Angle Shot, Dutch Angle, Bird’s Eye View, Wide Shot, Medium Shot, etc.
+1. **登录 Sora 账号**：
+    - 访问 [Sora 网站](https://sora.com)，使用账号信息登录。
+    - 如果还没有账号，请[在此注册](https://sora.com/signup)。
 
-- **Camera Movements**: Describe how the camera transitions between frames or repositions itself.
-  - *Examples*: Pan, Tilt, Dolly, Truck, Crane (Jib), Zoom, Steadicam, Arc, Roll, Whip Pan, Handheld, etc.
+2. **进入视频生成区域**：
+    - 在控制面板中选择“创建新视频”。
 
-Understanding these elements will allow you to craft detailed and effective prompts that guide Sora in generating the desired visual narratives.
+3. **输入提示词**：
+    - 按照本教程的建议，在提示词输入框中输入电影级提示词。
+
+4. **配置设置（可选）**：
+    - 根据项目需求调整视频时长、分辨率和其他设置。
+
+5. **生成视频**：
+    - 点击“生成”按钮，等待 Sora 处理提示词。处理时间取决于提示词的复杂程度。
+
+6. **检查并完善**：
+    - 视频生成后仔细检查结果。
+    - 如有必要，反复调整提示词，直到视频达到预期效果。
 
 ---
 
-## 5. Aligning Mood and Message with Camera Shots
+## 4. 理解电影语言
 
-Each shot type serves a specific narrative purpose. Select the shot that best emphasizes the emotional tone or story element you want to highlight.
+编写 Sora 提示词前，请先熟悉电影语言的两个关键组成部分：
 
-### Examples:
+- **镜头景别**：定义画面构图以及主体与观众之间的关系。
+  - *示例*：特写（CU）、过肩镜头（OTS）、俯拍、荷兰角度、鸟瞰、全景、中景等。
 
-- **Close-Up (CU)**: Highlights detail or emotion on a face or object.
+- **镜头运动**：描述镜头如何在画面之间移动或重新定位。
+  - *示例*：摇摄、俯仰、推轨、横移、升降（摇臂）、变焦、斯坦尼康、环绕、旋转、甩镜、手持等。
+
+理解这些元素后，你就能编写详细而有效的提示词，引导 Sora 生成想要的视觉叙事。
+
+---
+
+## 5. 用镜头景别匹配情绪与信息
+
+每种景别都有特定的叙事作用。请选择最能突出目标情绪或故事元素的镜头。
+
+### 示例
+
+- **特写（CU）**：突出人物面部或物体的细节与情绪。
 
   ```plaintext
   "Begin with a close-up shot of the protagonist’s face, capturing every subtle expression of determination."
   ```
 
-- **Over-the-Shoulder (OTS)**: Frames a conversation or interaction from behind a character, adding context and immersion.
+- **过肩镜头（OTS）**：从角色身后拍摄对话或互动，增加场景信息与沉浸感。
 
   ```plaintext
   "Transition to an over-the-shoulder shot of the mentor observing the apprentice’s work."
   ```
 
-- **High Angle Shot**: Positions the camera above the subject, often making them appear vulnerable or smaller.
+- **俯拍**：将镜头置于主体上方，通常使主体显得脆弱或渺小。
 
   ```plaintext
   "Use a high angle shot to reveal the hero standing alone in a vast, empty field, emphasizing their isolation."
   ```
 
-- **Low Angle Shot**: Positions the camera below the subject, making them appear more imposing or powerful.
+- **仰拍**：将镜头置于主体下方，使主体显得更具压迫感或力量感。
 
   ```plaintext
   "From a low angle shot, show the towering figure of the CEO addressing the crowd."
   ```
 
-- **Bird’s Eye View**: Looks straight down, offering an omniscient perspective.
+- **鸟瞰**：从正上方垂直俯视，提供全知视角。
 
   ```plaintext
   "Begin with a bird’s eye view shot of the city streets, bustling with midday activity."
   ```
 
-- **Dutch Angle**: Tilts the camera to create tension or unease.
+- **荷兰角度**：倾斜镜头，营造紧张或不安感。
 
   ```plaintext
   "Cut to a Dutch angle shot of the alleyway, conveying a sense of disorientation and danger."
   ```
 
-- **Wide Shot (WS)**: Captures a large area, providing context and setting.
+- **全景（WS）**：呈现较大范围，为主体提供环境和场景信息。
 
   ```plaintext
   "Start with a wide shot of the bustling marketplace, showcasing the vibrant stalls and busy shoppers."
   ```
 
-- **Medium Shot (MS)**: Frames the subject from the waist up, balancing detail and context.
+- **中景（MS）**：通常取人物腰部以上，在细节和环境信息之间取得平衡。
 
   ```plaintext
   "Use a medium shot to show the protagonist engaging in a heated conversation with the antagonist."
@@ -164,91 +164,91 @@ Each shot type serves a specific narrative purpose. Select the shot that best em
 
 ---
 
-## 6. Enhancing Narratives with Camera Movements
+## 6. 用镜头运动增强叙事
 
-Camera movements add dynamism, guiding the viewer’s focus and setting the tone.
+镜头运动可以增加画面动感，引导观众视线并建立整体基调。
 
-### Examples:
+### 示例
 
-- **Pan (Horizontal Pivot)**: Sweeps across a scene, revealing more information.
+- **摇摄（水平旋转）**：横向扫过场景，逐步揭示更多信息。
 
   ```plaintext
   "Pan across the skyline, slowly revealing the hidden rooftop garden."
   ```
 
-- **Tilt (Vertical Pivot)**: Moves the frame up or down, showcasing height or dropping focus.
+- **俯仰（垂直旋转）**：上下移动画面，展现高度或改变关注重点。
 
   ```plaintext
   "Tilt downward from the treetops to the forest floor, unveiling a hidden cabin."
   ```
 
-- **Dolly (In/Out)**: Moves the camera closer or farther away from the subject, adding depth.
+- **推轨（推进/拉远）**：让镜头靠近或远离主体，增强空间深度。
 
   ```plaintext
   "Dolly in toward the antique music box, intensifying the audience’s curiosity as it opens."
   ```
 
-- **Truck (Left/Right)**: Moves the camera side-to-side, often following action.
+- **横移（左/右）**：让镜头左右移动，通常用于跟随动作。
 
   ```plaintext
   "Truck right as the dancers move across the stage, maintaining them in the frame."
   ```
 
-- **Pedestal (Up/Down)**: Adjusts camera height, revealing new visual layers.
+- **升降（上/下）**：调整镜头高度，揭示新的画面层次。
 
   ```plaintext
   "Pedestal up to show the second-story balcony where the spy observes from above."
   ```
 
-- **Zoom (In/Out)**: Changes the focal length, magnifying or distancing the subject.
+- **变焦（推近/拉远）**：改变焦距，放大主体或拉开主体与观众的距离。
 
   ```plaintext
   "Zoom in on the handwritten letter, focusing on the signature that reveals the plot twist."
   ```
 
-- **Crane/Jib**: Sweeps over the scene, offering dramatic reveals.
+- **摇臂/升降镜头**：越过场景移动，带来戏剧性的揭示效果。
 
   ```plaintext
   "Use a crane shot from above the village square, descending into the marketplace’s hustle."
   ```
 
-- **Handheld**: Adds realism with subtle shakes and intimacy.
+- **手持**：通过轻微晃动增加真实感和亲密感。
 
   ```plaintext
   "Switch to a handheld shot as the reporter rushes toward the scene, capturing the urgency."
   ```
 
-- **Steadicam**: Creates smooth, continuous motion, excellent for following a character.
+- **斯坦尼康**：创造平滑连续的运动，适合跟随角色。
 
   ```plaintext
   "Follow the runner down the hallway with a steadicam shot, maintaining steady focus on their face."
   ```
 
-- **Arc**: Moves the camera in a semicircular path, adding dynamic perspective shifts.
+- **环绕**：让镜头沿半圆路径移动，带来动态的视角变化。
 
   ```plaintext
   "Arc around the couple dancing in the courtyard, showcasing the entire mosaic floor beneath them."
   ```
 
-- **Roll**: Rotates the camera to create a sense of disorientation.
+- **旋转**：旋转镜头，营造方向感错乱的效果。
 
   ```plaintext
   "Roll the camera as the character slips into a dream state, warping the bedroom’s walls."
   ```
 
-- **Whip Pan**: Fast horizontal pivot, ideal for quick transitions.
+- **甩镜**：快速水平转动，适合快速转场。
 
   ```plaintext
   "Whip pan from the laughing crowd to the shocked judge, emphasizing the sudden change in tone."
   ```
 
-- **Zoom Burst**: Rapid zooming that creates a dynamic and intense effect.
+- **快速变焦**：快速改变焦距，制造强烈而有动感的效果。
 
   ```plaintext
   "Perform a zoom burst towards the antagonist's face as they reveal their true intentions."
   ```
 
-- **Push In/Pull Out**: Gradually moves the camera closer or farther away to emphasize or de-emphasize elements.
+- **推进/拉远**：逐渐靠近或远离主体，突出或弱化画面元素。
 
   ```plaintext
   "Push in towards the protagonist's hand reaching out, highlighting their desperation."
@@ -256,11 +256,11 @@ Camera movements add dynamism, guiding the viewer’s focus and setting the tone
 
 ---
 
-## 7. Combining Shots and Movements in Prompts
+## 7. 组合提示词中的景别与运动
 
-Layer multiple cinematic instructions to form richer prompts. Combining different shots and movements can create more dynamic and engaging video sequences.
+可以叠加多种电影指令，形成更丰富的提示词。组合不同景别和镜头运动，能够创造更有动感、更吸引人的视频段落。
 
-### Example Combined Prompt:
+### 组合示例
 
 ```plaintext
 "Start with a wide angle, over-the-shoulder shot of the protagonist standing at the edge of a cliff. Dolly in slowly as they extend their hand over the valley below. Then tilt down to reveal the winding river beneath. Finally, cut to a close-up shot of their determined expression, zooming in to capture every subtle emotion."
@@ -268,23 +268,23 @@ Layer multiple cinematic instructions to form richer prompts. Combining differen
 
 ---
 
-## 8. Incorporating Contextual Details
+## 8. 加入环境细节
 
-Adding contextual elements such as lighting, color schemes, and background details can enhance the visual storytelling of your prompts.
+加入灯光、色彩方案和背景细节等环境元素，可以增强提示词的视觉叙事效果。
 
-- **Lighting**: Specifies the mood through light and shadow.
+- **灯光**：通过光影确定情绪。
 
   ```plaintext
   "Use soft, golden-hour lighting to create a warm and hopeful atmosphere."
   ```
 
-- **Color Schemes**: Sets the tone with color choices.
+- **色彩方案**：通过色彩选择设定基调。
 
   ```plaintext
   "Employ a monochromatic blue palette to evoke a sense of melancholy."
   ```
 
-- **Background Details**: Adds depth and realism.
+- **背景细节**：增加画面的层次感和真实感。
 
   ```plaintext
   "Include a bustling cityscape in the background, with neon signs flickering in the night."
@@ -292,39 +292,39 @@ Adding contextual elements such as lighting, color schemes, and background detai
 
 ---
 
-## 9. Best Practices and Tips
+## 9. 最佳实践与技巧
 
-- **Be Specific**: Clearly describe the desired shots and movements to guide Sora effectively.
-- **Use Descriptive Language**: Incorporate adjectives and vivid descriptions to paint a clear picture.
-- **Maintain Consistency**: Ensure that the chosen shots and movements align with the overall narrative and mood.
-- **Iterate and Refine**: Don’t hesitate to adjust your prompts based on the generated outputs to achieve the best results.
-
----
-
-## 10. Common Mistakes to Avoid
-
-- **Vague Descriptions**: Ambiguous prompts can lead to unclear or unfocused videos.
-- **Overloading Instructions**: Too many commands in a single prompt may confuse the AI and result in disjointed sequences.
-- **Ignoring Narrative Flow**: Ensure that the sequence of shots and movements logically progresses the story.
-- **Neglecting Technical Specifications**: Missing out on important details like resolution or aspect ratio can affect the final video quality.
+- **具体明确**：清楚描述所需的景别和运动，有效引导 Sora。
+- **使用描述性语言**：加入形容词和生动描述，构建清晰画面。
+- **保持一致**：确保所选景别和运动与整体叙事及情绪一致。
+- **反复完善**：根据生成结果调整提示词，以获得最佳效果。
 
 ---
 
-## 11. Advanced Techniques
+## 10. 应避免的常见错误
 
-- **Layering Multiple Movements**: Combine movements for more complex camera actions.
+- **描述含糊**：模糊的提示词可能导致视频内容不清晰或缺乏重点。
+- **指令过载**：单个提示词包含过多命令可能使 AI 困惑，造成片段衔接混乱。
+- **忽略叙事节奏**：确保景别和镜头运动的顺序能够合理推进故事。
+- **忽略技术规格**：遗漏分辨率或画面比例等重要细节会影响最终质量。
+
+---
+
+## 11. 进阶技巧
+
+- **叠加多种运动**：组合不同运动，构建更复杂的镜头动作。
 
   ```plaintext
   "Begin with a pan to the left while dollying in, then perform a tilt up to capture the rising sun."
   ```
 
-- **Incorporating Special Effects**: Mention specific effects to enhance visuals.
+- **加入特殊效果**：指定特殊效果，增强视觉表现。
 
   ```plaintext
   "Add a slow-motion effect as the character leaps across the gap, emphasizing the gravity of the moment."
   ```
 
-- **Dynamic Transitions**: Use creative transitions between scenes.
+- **动态转场**：使用有创意的方式连接不同场景。
 
   ```plaintext
   "Transition with a whip pan that blurs the scene into the next location seamlessly."
@@ -332,43 +332,43 @@ Adding contextual elements such as lighting, color schemes, and background detai
 
 ---
 
-## 12. Troubleshooting
+## 12. 故障排查
 
-- **Unclear Outputs**: If the video lacks clarity, revisit your prompt to add more specific descriptions.
-- **Inconsistent Styles**: Ensure that all elements of your prompt maintain a cohesive style and tone.
-- **Technical Issues**: Check your account permissions and settings if you encounter errors during video generation.
-
----
-
-## 13. FAQ
-
-**Q: Can I use Sora for commercial projects?**
-
-A: Yes, with the appropriate license, you can use Sora-generated videos for commercial purposes. Refer to [Sora’s licensing guidelines](https://sora.com/license) for more details.
-
-**Q: How long does it take to generate a video?**
-
-A: Video generation time varies based on prompt complexity and chosen settings but typically ranges from a few seconds to a couple of minutes.
-
-**Q: Can I edit the video after it's generated?**
-
-A: While Sora provides high-quality outputs, you can further edit the videos using standard video editing software if needed.
+- **输出不清晰**：如果视频缺乏清晰度，请重新检查提示词并添加更具体的描述。
+- **风格不一致**：确保提示词中的所有元素保持统一的风格和基调。
+- **技术问题**：生成视频时遇到错误，请检查账号权限和相关设置。
 
 ---
 
-## 14. Visual Aids
+## 13. 常见问题
 
-Incorporate diagrams, flowcharts, or example frames to visually support your prompts. Visual aids can help in better understanding and refining your cinematic instructions.
+**问：我可以将 Sora 用于商业项目吗？**
+
+答：可以。在拥有适当许可的情况下，你可以将 Sora 生成的视频用于商业用途。详情请参阅 [Sora 许可指南](https://sora.com/license)。
+
+**问：生成视频需要多长时间？**
+
+答：生成时间取决于提示词复杂度和所选设置，通常需要几秒到几分钟。
+
+**问：视频生成后可以编辑吗？**
+
+答：Sora 能提供高质量输出；如有需要，你也可以使用常见的视频编辑软件进一步剪辑。
 
 ---
 
-## 15. Conclusion
+## 14. 视觉辅助
 
-Crafting effective cinematic prompts for Sora involves a blend of understanding cinematic language, precise description, and thoughtful structuring. By following this tutorial, you can create immersive and visually stunning videos that effectively convey your intended narratives and emotions.
+可以加入示意图、流程图或示例画面，为提示词提供视觉参考。视觉辅助有助于理解和完善电影化指令。
 
 ---
 
-## 16. Additional Resources
+## 15. 结语
+
+为 Sora 编写有效的电影级提示词，需要结合对电影语言的理解、准确的描述和合理的结构。遵循本教程，你可以创作出沉浸且具有视觉冲击力的视频，有效传达预期的故事和情绪。
+
+---
+
+## 16. 更多资源
 
 - [Sora Documentation](https://sora.com/docs)
 - [Cinematic Techniques Guide](https://cinematic.com/techniques)
@@ -376,19 +376,21 @@ Crafting effective cinematic prompts for Sora involves a blend of understanding 
 
 ---
 
-## 17. License and Contribution Guidelines
+## 17. 许可证与贡献指南
 
-This tutorial is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/). Contributions and improvements are welcome! Please follow the [contribution guidelines](https://sora.com/contribute) to submit your enhancements.
+本教程采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/) 授权。欢迎提交贡献和改进，请遵循[贡献指南](https://sora.com/contribute)提交修改。
 
 ---
 
-## 18. Appendix: Collection of Video Prompts
+## 18. 附录：视频提示词合集
 
-This appendix provides a comprehensive collection of video prompts categorized by **Genre**, **Style**, **Cinematic Style**, **Director of Photography**, and **Production Styles**. Each prompt is designed to inspire and guide the creation of professional and cinematic videos using Sora.
+本附录按 **类型**、**风格**、**电影风格**、**摄影指导**和 **制作方式** 分类整理视频提示词。每条提示词都旨在启发创作，并帮助你使用 Sora 制作专业的电影级视频。
 
-### 1. By Genre
+> **提示词原文说明**：下方代码块保留英文原文，便于直接复制到 Sora 使用；分类、标题和教程说明均已中文化。
 
-#### 1.1 Action
+### 1. 按类型
+
+#### 1.1 动作
 1. **High-Speed Chase Through Downtown**
    ```plaintext
    "Begin with a wide shot of a bustling downtown area at dusk. Follow with a handheld camera tracking a speeding car weaving through traffic, interspersed with close-ups of the driver's intense focus."
@@ -410,7 +412,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
    "Start with a wide underwater shot showing divers approaching a secret facility. Use a dolly in to highlight the protagonist planting surveillance devices, accompanied by tense, suspenseful music."
    ```
 
-#### 1.2 Comedy
+#### 1.2 喜剧
 6. **Misadventures in the Office**
    ```plaintext
    "Begin with an over-the-shoulder shot of an employee struggling with a malfunctioning copier. Transition to a series of medium shots capturing humorous interactions with quirky coworkers."
@@ -432,7 +434,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Use a medium shot of the host in a vibrant kitchen setting. Incorporate close-ups of ingredients and comical mishaps as the host tries to follow a complicated recipe."
     ```
 
-#### 1.3 Drama
+#### 1.3 剧情
 11. **Emotional Reunion at the Airport**
     ```plaintext
     "Start with a wide shot of the bustling airport terminal. Use a close-up to capture the tearful embrace between long-separated family members, emphasizing their emotional connection."
@@ -454,7 +456,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Begin with a high angle shot of two lovers meeting secretly. Transition to intimate close-ups and wide shots of their interactions amidst a divided and tense societal backdrop."
     ```
 
-#### 1.4 Horror
+#### 1.4 恐怖
 16. **Haunted House at Midnight**
     ```plaintext
     "Use a Dutch angle shot to introduce the eerie haunted house. Incorporate handheld camera movements to follow the protagonist as they explore dark, creepy rooms filled with supernatural occurrences."
@@ -476,7 +478,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Start with a medium shot of a room filled with antique dolls. Perform a slow pan as one doll's eyes begin to glow, followed by close-ups of its eerie, lifelike movements."
     ```
 
-#### 1.5 Sci-Fi
+#### 1.5 科幻
 21. **Space Exploration on an Alien Planet**
     ```plaintext
     "Begin with a wide shot of a vast, alien landscape under a strange sky. Use a dolly in to focus on the explorer surveying the unfamiliar terrain, highlighting advanced technology and mysterious structures."
@@ -498,7 +500,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Use a wide shot to showcase a grand conference hall with representatives from multiple alien species. Incorporate over-the-shoulder shots and close-ups to capture the tension and diplomacy involved in the negotiations."
     ```
 
-#### 1.6 Fantasy
+#### 1.6 奇幻
 26. **Epic Battle Between Good and Evil**
     ```plaintext
     "Start with a wide aerial shot of the battlefield at dawn. Use sweeping crane shots to capture the clash between armies, followed by intense close-ups of key heroes and villains in combat."
@@ -520,7 +522,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Use a medium shot to show archaeologists discovering an ancient temple. Transition to a crane shot as a mystical portal opens, followed by dynamic camera movements entering the portal into a fantastical realm."
     ```
 
-#### 1.7 Romance
+#### 1.7 爱情
 31. **Sunset Proposal on the Beach**
     ```plaintext
     "Begin with a wide shot of a serene beach at sunset. Use a dolly in to focus on the protagonist getting down on one knee, capturing the emotional expressions of both characters."
@@ -542,7 +544,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Begin with a wide shot of an open field under a starry night sky. Transition to a steadicam following the couple as they dance, using soft lighting and gentle camera movements to enhance the romantic atmosphere."
     ```
 
-#### 1.8 Thriller
+#### 1.8 惊悚
 36. **Cat and Mouse in the Abandoned Factory**
     ```plaintext
     "Start with a medium shot of the protagonist entering the eerie factory. Use tight tracking shots and quick pans to build suspense as they evade the antagonist lurking in the shadows."
@@ -564,7 +566,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Start with a wide shot of the city skyline with ominous signs of impending disaster. Use fast-paced tracking shots and close-ups of the protagonist's frantic efforts to avert the catastrophe."
     ```
 
-#### 1.9 Documentary
+#### 1.9 纪录片
 41. **Life in the Amazon Rainforest**
     ```plaintext
     "Begin with a wide shot of the dense Amazon rainforest. Use a combination of aerial and ground-level shots to showcase the diverse wildlife and indigenous communities, accompanied by informative narration."
@@ -586,7 +588,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Use a wide shot to introduce various cultural festivals globally. Transition to close-ups and medium shots of participants engaging in traditional dances, ceremonies, and festivities, highlighting their significance."
     ```
 
-#### 1.10 Animation
+#### 1.10 动画
 46. **Adventure of the Brave Little Robot**
     ```plaintext
     "Begin with a wide shot of a colorful, animated city. Use dynamic camera movements to follow the little robot on its adventure, incorporating whimsical elements and expressive character animations."
@@ -608,9 +610,9 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Start with a wide underwater shot of a fantastical kingdom. Use dolly and crane shots to explore the vibrant marine life and animated characters as the protagonist discovers the hidden realm."
     ```
 
-### 2. By Style
+### 2. 按风格
 
-#### 2.1 Noir
+#### 2.1 黑色电影
 51. **Shadowed Detective in the Rain**
     ```plaintext
     "Use high contrast lighting and deep shadows to create a moody noir atmosphere. Start with a medium shot of the detective under a streetlamp in the rain, followed by close-ups highlighting their contemplative expressions."
@@ -632,7 +634,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Begin with a wide shot of a dimly lit, smoky bar. Use handheld camera movements and tight close-ups to convey the characters' internal struggles and the melancholic noir mood."
     ```
 
-#### 2.2 Minimalist
+#### 2.2 极简主义
 56. **Solitude in the Empty Room**
     ```plaintext
     "Use a wide shot with ample negative space to emphasize the protagonist's isolation. Incorporate slow, deliberate camera movements and simple lighting to create a serene minimalist aesthetic."
@@ -654,7 +656,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Begin with a wide shot of the protagonist meditating in a spacious, uncluttered environment. Use subtle camera movements and soft lighting to convey tranquility and mindfulness."
     ```
 
-#### 2.3 Vintage
+#### 2.3 复古
 61. **Retro 1950s Diner Scene**
     ```plaintext
     "Start with a wide shot of a bustling 1950s-style diner. Use warm, saturated colors and nostalgic camera movements to capture the lively atmosphere and classic diner aesthetics."
@@ -676,7 +678,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Start with a wide shot of a quaint antique shop filled with vintage items. Use close-ups and slow pans to explore the treasures within, employing a warm color palette to enhance the nostalgic ambiance."
     ```
 
-#### 2.4 Modern
+#### 2.4 现代
 66. **Urban Lifestyle Vlog**
     ```plaintext
     "Begin with a wide shot of a vibrant cityscape. Use steadycam movements and dynamic angles to follow the protagonist through their daily urban activities, showcasing the energy of modern city life."
@@ -698,7 +700,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Begin with a wide shot of a sleek, modern runway. Use dynamic camera movements and close-ups to capture the latest fashion trends and the models' confident walk, emphasizing the contemporary style."
     ```
 
-#### 2.5 Surreal
+#### 2.5 超现实
 71. **Dreamscape in the Clouds**
     ```plaintext
     "Start with a wide shot of a floating island in the clouds. Use fluid, dream-like camera movements and vibrant colors to create a surreal and fantastical atmosphere."
@@ -720,7 +722,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Start with a split-screen showing two parallel worlds. Use dynamic transitions and mirrored camera movements to depict the collision and blending of these surreal realities."
     ```
 
-#### 2.6 Realistic
+#### 2.6 写实
 76. **Daily Commute in the City**
     ```plaintext
     "Use a wide shot to depict the bustling city streets during rush hour. Incorporate steady tracking shots and natural lighting to capture the realistic flow of commuters and traffic."
@@ -742,7 +744,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Use a wide shot to capture the vibrant atmosphere of a community block party. Incorporate medium and close-up shots to showcase the interactions, activities, and joyful moments among neighbors."
     ```
 
-#### 2.7 Abstract
+#### 2.7 抽象
 81. **Color Explosion in Motion**
     ```plaintext
     "Begin with a black screen that suddenly bursts into vibrant colors swirling and mixing in abstract patterns. Use fast-paced camera movements and dynamic angles to create a visually stimulating experience."
@@ -764,7 +766,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Begin with an abstract representation of sound waves moving through space. Use synchronized camera movements and color changes to visualize the rhythm and intensity of the sounds, creating a harmonious blend of audio and visuals."
     ```
 
-#### 2.8 Experimental
+#### 2.8 实验
 86. **Non-Linear Storytelling Montage**
     ```plaintext
     "Use a series of disconnected shots and unconventional transitions to tell a fragmented story. Incorporate varying camera angles and movements to create an experimental narrative structure."
@@ -786,7 +788,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Start with a static wide shot, then dynamically switch to unexpected angles and perspectives without warning. Use abrupt camera movements and unconventional framing to create an unpredictable and experimental visual experience."
     ```
 
-#### 2.9 Documentary Experimental
+#### 2.9 纪录片实验
 91. **Abstract Exploration of Human Emotions**
     ```plaintext
     "Use experimental camera techniques and abstract visuals to explore the depth and complexity of human emotions, blending documentary storytelling with artistic expression."
@@ -808,7 +810,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
     "Combine poetic narration with experimental visuals to depict the cyclical patterns of nature, using creative camera techniques to enhance the lyrical and artistic quality of the documentary."
     ```
 
-### 2.10 Historical Drama
+### 2.10 历史剧情
 96. **Revolutionary War Hero’s Journey**
     ```plaintext
     "Use historical settings and authentic costumes to depict a hero's journey during the Revolutionary War, incorporating dramatic camera movements to highlight pivotal moments."
@@ -830,9 +832,9 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Blend historical drama with thriller elements by depicting a spy’s mission during World War II, using period-appropriate cinematography and dynamic camera angles to enhance suspense."
 ```
 
-### 3. By Cinematic Style
+### 3. 按电影风格
 
-#### 3.1 Cinematic Realism
+#### 3.1 电影写实主义
 101. **Authentic Street Life Documentary**
 ```plaintext
 "Use a combination of wide and close-up shots to depict everyday life on a busy city street. Incorporate natural lighting and steady camera movements to maintain a realistic and immersive feel."
@@ -854,7 +856,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use a mix of wide and tracking shots to follow the protagonist exploring abandoned urban spaces. Incorporate natural lighting and realistic camera movements to maintain an authentic adventure vibe."
 ```
 
-#### 3.2 Expressionist
+#### 3.2 表现主义
 106. **Emotional Turmoil in a Dark Room**
 ```plaintext
 "Use distorted angles and exaggerated lighting to depict the protagonist's inner emotional struggles. Incorporate close-ups and abstract camera movements to enhance the expressionist style."
@@ -876,7 +878,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Begin with a dark, shadow-filled scene. Use distorted camera angles and intense lighting to visually represent the abstract concept of fear, creating a powerful expressionist impact."
 ```
 
-#### 3.3 Neo-Classical
+#### 3.3 新古典主义
 111. **Modern Take on Greek Mythology**
 ```plaintext
 "Use grand, symmetrical compositions and classical lighting to depict a modern retelling of a Greek myth. Incorporate wide shots and elegant camera movements to maintain a neo-classical aesthetic."
@@ -898,7 +900,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use wide and close-up shots to capture the elegance of the ballet performance. Incorporate classical lighting and symmetrical compositions to enhance the neo-classical atmosphere."
 ```
 
-#### 3.4 Documentary Style
+#### 3.4 纪录片风格
 116. **Behind the Scenes of a Film Production**
 ```plaintext
 "Use a mix of wide and close-up shots to capture the various stages of film production. Incorporate interviews and candid moments to provide an authentic documentary feel."
@@ -920,9 +922,9 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use a combination of wide and close-up shots to depict cutting-edge healthcare technologies. Incorporate interviews with experts and detailed visuals to provide an educational documentary experience."
 ```
 
-### 4. By Director of Photography
+### 4. 按摄影指导风格
 
-#### 4.1 Roger Deakins Inspired
+#### 4.1 罗杰·迪金斯风格
 121. **Natural Light in Rural Settings**
 ```plaintext
 "Use soft, natural lighting and wide compositions to capture the serene beauty of rural landscapes, emulating Roger Deakins' signature style."
@@ -944,7 +946,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use intimate close-up shots with precise lighting to highlight character emotions and nuances, following Roger Deakins' detailed cinematographic style."
 ```
 
-#### 4.2 Emmanuel Lubezki Inspired
+#### 4.2 埃马纽埃尔·卢贝兹基风格
 126. **Continuous Long Takes in Natural Settings**
 ```plaintext
 "Use continuous long takes with natural lighting to create immersive scenes, inspired by Emmanuel Lubezki's fluid camera movements."
@@ -966,7 +968,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use minimalistic lighting and deep depth of field to create clear, detailed visuals, following Emmanuel Lubezki's clean and naturalistic style."
 ```
 
-#### 4.3 Janusz Kamiński Inspired
+#### 4.3 扬努斯·卡明斯基风格
 131. **Gritty War Drama with Stark Lighting**
 ```plaintext
 "Use stark, high-contrast lighting and gritty compositions to depict intense war scenes, inspired by Janusz Kamiński's dramatic style."
@@ -988,7 +990,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Incorporate moody atmospheres and dramatic lighting in urban landscapes to emphasize tension and drama, inspired by Janusz Kamiński."
 ```
 
-#### 4.4 Bradford Young Inspired
+#### 4.4 布拉德福德·杨风格
 136. **Intimate Portraits with Soft Lighting**
 ```plaintext
 "Use soft, diffused lighting and tight compositions to create intimate portraits, inspired by Bradford Young's tender cinematographic style."
@@ -1010,7 +1012,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use rich textures and deep shadows to add depth and complexity to visuals, following Bradford Young's detailed and evocative style."
 ```
 
-#### 4.5 Gordon Willis Inspired
+#### 4.5 戈登·威利斯风格
 141. **High Contrast Black and White Cinematography**
 ```plaintext
 "Use high contrast black and white lighting to create dramatic and visually striking scenes, inspired by Gordon Willis' iconic style."
@@ -1032,9 +1034,9 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use subtle lighting enhancements to set the mood and tone of scenes, following Gordon Willis' nuanced approach to lighting."
 ```
 
-### 5. By Production Styles
+### 5. 按制作方式
 
-#### 5.1 Single Camera
+#### 5.1 单机位
 146. **Solo Artist Performing on Stage**
 ```plaintext
 "Use a single camera setup to capture a solo artist performing on stage. Incorporate wide and close-up shots to showcase their performance and expressions seamlessly."
@@ -1056,7 +1058,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Follow a protagonist's solo journey through the city using a single camera, incorporating tracking and handheld shots to create a personal and immersive experience."
 ```
 
-#### 5.2 Multi-Camera
+#### 5.2 多机位
 151. **Live Television Talk Show**
 ```plaintext
 "Use a multi-camera setup to capture different angles of a live talk show, including wide shots of the stage and close-ups of the host and guests for a dynamic viewing experience."
@@ -1078,7 +1080,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use multiple cameras to film a reality TV show, capturing various participants and their interactions from different perspectives to provide a well-rounded narrative."
 ```
 
-#### 5.3 Handheld
+#### 5.3 手持拍摄
 156. **Intense Action Scene with Handheld Camera**
 ```plaintext
 "Use a handheld camera to film an intense action scene, incorporating shaky movements and dynamic angles to heighten the sense of urgency and chaos."
@@ -1100,7 +1102,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Implement handheld camera techniques to film a high-energy chase sequence, using rapid movements and tight framing to convey the thrill and intensity."
 ```
 
-#### 5.4 Steadicam
+#### 5.4 斯坦尼康
 161. **Smooth Walkthrough of an Art Gallery**
 ```plaintext
 "Use a steadicam to smoothly navigate through an art gallery, capturing wide and close-up shots of the artwork and visitors without any camera shake."
@@ -1122,7 +1124,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Employ a steadicam to explore an abandoned building, smoothly moving through different rooms and capturing the eerie atmosphere without abrupt camera shifts."
 ```
 
-#### 5.5 Drone Footage
+#### 5.5 无人机航拍
 166. **Aerial View of a Coastal City**
 ```plaintext
 "Use drone footage to capture a stunning aerial view of a coastal city, showcasing the shoreline, skyline, and bustling waterfront from above."
@@ -1144,7 +1146,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use drone footage to create a time-lapse of a sunrise over the horizon, capturing the gradual change in light and the emergence of the day from above."
 ```
 
-#### 5.6 Drone and Steadicam Hybrid
+#### 5.6 无人机与斯坦尼康混合
 171. **Seamless Transition from Aerial to Ground Level**
 ```plaintext
 "Start with drone footage capturing an aerial view of a landscape, then seamlessly transition to a steadicam following the protagonist as they descend to the ground level."
@@ -1166,7 +1168,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Employ drone and steadicam hybrid techniques to cover a large event, providing both aerial overviews and intimate ground-level perspectives for a comprehensive view."
 ```
 
-#### 5.7 Handheld and Steadicam Combination
+#### 5.7 手持与斯坦尼康组合
 176. **Dynamic Chase Scene with Mixed Camera Techniques**
 ```plaintext
 "Use a combination of handheld and steadicam shots to film a dynamic chase scene, alternating between the raw intensity of handheld footage and the smooth continuity of steadicam movements."
@@ -1188,7 +1190,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Combine steadicam footage for the surrounding action with handheld shots to capture intimate conversations between characters, creating a layered and dynamic narrative."
 ```
 
-#### 5.8 Drone and Handheld Hybrid
+#### 5.8 无人机与手持混合
 181. **High-Speed Pursuit from the Sky and Ground**
 ```plaintext
 "Start with drone footage tracking a vehicle at high speed, then seamlessly transition to handheld shots inside the vehicle to capture the driver's intense focus."
@@ -1210,7 +1212,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use drone footage to locate and track wildlife from above, then transition to handheld shots to observe and document their behavior up close."
 ```
 
-### 3.9 Visual Effects Integration
+### 3.9 视觉特效融合
 186. **Seamless CGI Integration in Live-Action Scenes**
 ```plaintext
 "Use a combination of live-action and CGI elements, employing steadycam and tracking shots to seamlessly integrate visual effects into the narrative."
@@ -1232,9 +1234,9 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Combine virtual set extensions with drone footage to create expansive and immersive environments, using dynamic camera movements to transition between real and virtual spaces."
 ```
 
-### 4. By Genre and Style Combination
+### 4. 按类型与风格组合
 
-#### 4.1 Action Noir
+#### 4.1 动作黑色电影
 191. **Shadowed Pursuit in the Rain**
 ```plaintext
 "Combine the gritty noir aesthetic with high-energy action by using high contrast lighting and handheld camera movements to follow a detective chasing a suspect through rain-soaked streets."
@@ -1256,7 +1258,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Merge noir-style lighting and framing with a high-speed car chase, using deep shadows and dynamic tracking shots to enhance the suspense and intensity."
 ```
 
-#### 4.2 Comedy Minimalist
+#### 4.2 极简喜剧
 196. **Silent Comedy in a Minimalist Apartment**
 ```plaintext
 "Use minimalist set design and clean compositions to highlight physical comedy and humorous interactions within a simple apartment setting."
@@ -1278,7 +1280,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Combine minimalist set design with comedic misunderstandings between characters, using clean compositions and natural lighting to enhance the humor."
 ```
 
-#### 4.3 Drama Realistic
+#### 4.3 写实剧情
 201. **Authentic Family Conflict in a Realistic Setting**
 ```plaintext
 "Use realistic lighting and naturalistic performances to depict a genuine family conflict, employing steady camera movements and intimate close-ups to convey emotional depth."
@@ -1300,7 +1302,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use a modern cityscape with natural lighting and steady camera work to depict a realistic romance, focusing on genuine interactions and relatable emotions between characters."
 ```
 
-#### 4.4 Horror Surreal
+#### 4.4 超现实恐怖
 206. **Surreal Haunting in a Twisted Reality**
 ```plaintext
 "Combine horror elements with surreal visuals, using distorted camera angles and dream-like lighting to create an unsettling and otherworldly haunted environment."
@@ -1322,7 +1324,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Blend classic fairy tale elements with horror and surreal visuals, using creative camera movements and distorted settings to create a dark and twisted fairy tale narrative."
 ```
 
-#### 4.5 Sci-Fi Experimental
+#### 4.5 实验科幻
 211. **Abstract Time Travel Journey**
 ```plaintext
 "Use experimental camera techniques and abstract visuals to depict a non-linear time travel journey, emphasizing the fluidity and complexity of time manipulation."
@@ -1344,7 +1346,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use abstract visuals and symbolic imagery to represent the evolution of technology, combining sci-fi elements with experimental cinematography to convey complex concepts."
 ```
 
-#### 4.6 Fantasy Vintage
+#### 4.6 复古奇幻
 216. **Vintage Fairy Tale Kingdom**
 ```plaintext
 "Combine a vintage aesthetic with fantasy elements by using sepia-toned lighting and classical compositions to depict a magical kingdom filled with enchanting creatures."
@@ -1366,7 +1368,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use a vintage-inspired marketplace setting with fantasy elements, incorporating wide and close-up shots to capture the magical interactions and enchanting atmosphere."
 ```
 
-#### 4.7 Sci-Fi Thriller
+#### 4.7 科幻惊悚
 221. **AI Rebellion in a Futuristic City**
 ```plaintext
 "Use a combination of wide and close-up shots with high-tech visuals to depict an AI rebellion in a futuristic city, incorporating suspenseful camera movements and intense action."
@@ -1388,7 +1390,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Incorporate noir-style shadows and lighting with a dystopian sci-fi backdrop, following a detective as they uncover dark secrets within a technologically advanced yet morally corrupt society."
 ```
 
-#### 4.8 Romantic Fantasy
+#### 4.8 浪漫奇幻
 226. **Enchanted Garden Love Story**
 ```plaintext
 "Use magical lighting and vibrant colors to depict a romantic love story set in an enchanted garden, incorporating sweeping camera movements to highlight the fantastical elements."
@@ -1410,7 +1412,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Blend romance with fantasy by showing how love conquers dark magic, using enchanting visuals and smooth camera transitions to highlight the transformative power of love."
 ```
 
-#### 4.9 Historical Drama
+#### 4.9 历史剧情
 231. **Revolutionary War Hero’s Journey**
 ```plaintext
 "Use historical settings and authentic costumes to depict a hero's journey during the Revolutionary War, incorporating dramatic camera movements to highlight pivotal moments."
@@ -1432,7 +1434,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Blend historical drama with thriller elements by depicting a spy’s mission during World War II, using period-appropriate cinematography and dynamic camera angles to enhance suspense."
 ```
 
-#### 4.10 Action Fantasy
+#### 4.10 动作奇幻
 236. **Hero’s Battle Against Mythical Creatures**
 ```plaintext
 "Use dynamic camera movements and sweeping aerial shots to depict the hero’s epic battles against various mythical creatures in a fantastical setting."
@@ -1454,7 +1456,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Use sweeping aerial drone footage and dynamic camera angles to depict a thrilling aerial battle infused with magical elements, highlighting the scale and intensity of the conflict."
 ```
 
-#### 4.11 Horror Comedy
+#### 4.11 恐怖喜剧
 241. **Clumsy Ghost Haunting a House**
 ```plaintext
 "Combine horror and comedy by depicting a clumsy ghost attempting to haunt a house, using humorous camera movements and playful lighting to balance scares with laughs."
@@ -1476,7 +1478,7 @@ This appendix provides a comprehensive collection of video prompts categorized b
 "Combine horror and comedy by showcasing a werewolf comedian performing at a stand-up show, using creative camera angles and humorous lighting to highlight the character's dual nature."
 ```
 
-#### 4.12 Animated Fantasy
+#### 4.12 动画奇幻
 246. **Dragon’s Journey to Find Friendship**
 ```plaintext
 "Use vibrant animation and dynamic camera movements to depict a dragon's journey to find friendship, incorporating magical landscapes and expressive character animations."
@@ -1499,4 +1501,3 @@ This appendix provides a comprehensive collection of video prompts categorized b
 ```
 
 ---
- 
