@@ -16,6 +16,7 @@
     .topbar-inner { min-height:64px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
     .brand { color:var(--ink); font-weight:750; letter-spacing:.02em; text-decoration:none; }
     .top-link { color:var(--muted); text-decoration:none; font-size:14px; }
+    nav { display:flex; gap:18px; }
     .hero { padding:72px 0 58px; border-bottom:1px solid var(--line); background:#fff; }
     .hero-grid { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr); gap:70px; align-items:end; }
     .eyebrow { margin:0 0 16px; color:var(--warm); font-size:13px; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
@@ -60,7 +61,10 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="./">Sora 提示词教程</a>
-      <a class="top-link" href="./Sora-prompts.md">查看原文档</a>
+      <nav>
+        <a class="top-link" href="./image-prompts.html">图片镜头图库</a>
+        <a class="top-link" href="./Sora-prompts.md">查看完整文档</a>
+      </nav>
     </div>
   </header>
   <section class="hero">
@@ -73,6 +77,7 @@
       <div class="hero-aside">
         <strong>先掌握镜头，再描述故事</strong>
         <p>好的提示词不只是堆砌形容词，而是把主体、动作、镜头、光线和情绪组织成一个可执行的视觉计划。</p>
+        <p><a href="./image-prompts.html">进入图片镜头提示词图库 →</a></p>
       </div>
     </main>
   </section>

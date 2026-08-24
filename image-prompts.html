@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片镜头提示词图库</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --card-hover: #e3f2fd;
+            --text-color: #333;
+            --border-color: #bbdefb;
+            --accent-color: #004d99;
+            --tag-color: #e65100;
+            --prompt-bg: #e3f2fd;
+            --prompt-border: #2196f3;
+        }
+        /* Fix: change .dark-mode to body.dark-mode */
+        body.dark-mode {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --card-hover: #2a2a2a;
+            --text-color: #f0f0f0;
+            --border-color: #333;
+            --accent-color: #bb86fc;
+            --tag-color: #ff7043;
+            --prompt-bg: #2d2d2d;
+            --prompt-border: #bb86fc;
+        }
+        /* Basic Reset and Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        h1 {
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--accent-color);
+        }
+        /* Search Bar */
+        .search-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        #search {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            font-size: 16px;
+        }
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+        .dark-mode-toggle button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Category Styling */
+        .category {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .category-title {
+            color: var(--tag-color);
+            border-bottom: 2px solid var(--tag-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        /* Prompt Card Styling */
+        .prompt-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .prompt-card {
+            background-color: var(--prompt-bg);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--prompt-border);
+            border-radius: 4px;
+            padding: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            position: relative;
+        }
+        .prompt-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .prompt-tag {
+            font-weight: bold;
+            color: var(--tag-color);
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+            word-break: break-word;
+        }
+        .prompt-description {
+            font-size: 0.9em;
+            color: var(--text-color);
+            margin-top: 10px;
+            padding-top: 5px;
+            border-top: 1px dashed var(--border-color);
+        }
+        .prompt-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            object-fit: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .edit-buttons {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            display: flex;
+            gap: 5px;
+        }
+        .edit-buttons button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 3px 8px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .edit-buttons button.save {
+            background: #4CAF50;
+        }
+        /* Utility for copy success */
+        .copy-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .copy-message.show {
+            opacity: 1;
+        }
+        /* Modal for editing */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            color: var(--text-color);
+        }
+        .modal textarea {
+            width: 100%;
+            height: 150px;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        .modal-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .modal-buttons button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal-buttons .save {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .modal-buttons .cancel {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="dark-mode-toggle">
+        <button id="dark-mode-toggle">深色模式</button>
+    </div>
+    <div class="container">
+        <p><a href="./">返回 Sora 视频提示词教程</a></p>
+        <h1>图片生成镜头提示词图库</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="搜索提示词……">
+        </div>
+
+        <div class="category">
+            <h2 class="category-title">镜头角度与方向</h2>
+            <div class="prompt-grid" id="angles-grid"></div>
+        </div>
+
+        <hr>
+        <div class="category">
+            <h2 class="category-title">镜头景别（构图与距离）</h2>
+            <div class="prompt-grid" id="shots-grid"></div>
+        </div>
+
+        <hr>
+        <div class="category">
+            <h2 class="category-title">构图风格标签</h2>
+            <div class="prompt-grid" id="composition-grid"></div>
+        </div>
+
+        <hr>
+        <div class="category">
+            <h2 class="category-title">运动镜头</h2>
+            <div class="prompt-grid" id="movement-grid"></div>
+        </div>
+
+        <hr>
+        <div class="category">
+            <h2 class="category-title">镜头与透视类型标签</h2>
+            <div class="prompt-grid" id="lens-grid"></div>
+        </hr>
+
+        <hr>
+        <div class="category">
+            <h2 class="category-title">特殊视角与透视标签</h2>
+            <div class="prompt-grid" id="special-grid"></div>
+        </div>
+    </div>
+
+    <div id="copy-message" class="copy-message">完整提示词已复制</div>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <h3>编辑提示词</h3>
+            <textarea id="edit-text"></textarea>
+            <div class="modal-buttons">
+                <button class="save" id="save-edit">保存</button>
+                <button class="cancel" id="cancel-edit">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Prompt data
+        const prompts = {
+            angles: [
+                { tag: "LOW ANGLE", label: "低角度", description: "[主题]（低角度拍摄：相机放置在视线以下，仰视拍摄对象。营造出一种力量、统治和纪念性的感觉。在背景的映衬下显得更大、更雄伟。）" },
+                { tag: "HIGH ANGLE", label: "高角度", description: "[主题]（高角度拍摄：相机位于视线上方，俯视拍摄对象。创造脆弱性、渺小或概览视角。拍摄对象在画面中显得被削弱或处于从属地位。）" },
+                { tag: "EYE LEVEL", label: "视线水平", description: "[主题]（眼平拍摄：相机位于拍摄对象眼睛的高度，创造中性、自然的视角。建立平等和现实主义，既不增强也不削弱拍摄对象。）" },
+                { tag: "EXTREME LOW ANGLE", label: "极低角度", description: "[主题]（极低角度拍摄：相机位置非常接近地面，向上看。产生戏剧性的尺度扭曲、高耸的效果以及强烈的支配感或恐吓感。）" },
+                { tag: "EXTREME HIGH ANGLE", label: "极高角度", description: "[主题]（极端高角度拍摄：相机位于拍摄对象上方远上方，陡峭地向下看。创造孤立、脆弱或上帝之眼的视角。拍摄对象在广阔的环境中显得很小。）" },
+                { tag: "WORM-EYE VIEW", label: "虫眼视图", description: "[主体]（从主体下方观看，虫眼视角，相机靠近地面，仰视。夸张的比例，低角度构图，强调主体的高度和主导地位。）" },
+                { tag: "BIRD-EYE VIEW", label: "鸟瞰图", description: "[拍摄对象]（温和空中视角：相机放置在拍摄对象上方，向下倾斜，以形成清晰、不失真的鸟瞰图。）" },
+                { tag: "DUTCH ANGLE", label: "荷兰角", description: "[主题]（温和的荷兰式摄像机角度：摄像机故意在滚动轴上倾斜，失去平衡，使构图具有对角线、动态的感觉，但只有很小的倾斜，而不是完整的旋转。）" },
+                { tag: "DUTCH TILT", label: "荷兰倾斜", description: "[主题]（荷兰式倾斜构图：相机在其轴上滚动，产生倾斜的地平线和对角透视。在画面中产生紧张、迷失方向或心理不安。）" },
+                { tag: "CANTED ANGLE", label: "倾斜角度", description: "（倾斜角度拍摄：相机从水平轴向侧面倾斜，形成倾斜构图。通过不平衡的取景传达不稳定、张力或动态能量。）" },
+                { tag: "OVERHEAD ANGLE", label: "顶角", description: "[主题]（俯视拍摄：相机直接位于主题上方，笔直向下。创建平面、图形构图，从上方显示空间关系和图案。）" },
+                { tag: "TOP-DOWN ANGLE", label: "自上而下的角度", description: "[主题]（自上而下的视角：相机从上方直接向下观看拍摄对象。以扁平化的视角强调布局、布置和空间设计。）" },
+                { tag: "OBLIQUE ANGLE", label: "斜角", description: "[主题]（斜角拍摄：相机与拍摄对象成对角线，既不平行也不垂直。创建深度、维度和动态三维透视。）" },
+                { tag: "SIDE ANGLE", label: "侧角", description: "[主体]（侧角拍摄：相机垂直于主体放置，捕捉纯粹的侧面视图。强调主体的轮廓、轮廓和横向尺寸。）" },
+                { tag: "FRONT ANGLE", label: "前角", description: "[主体]（正面角度：相机直接放置在主体前方，形成对称的正面视图。建立直接对抗、亲密或正式的呈现。）" },
+                { tag: "BACK ANGLE", label: "后角", description: "[主题]（后角拍摄：相机位于主题后面，显示后视图。创造神秘感、匿名性，或分享主题对前方事物的视角。）" },
+                { tag: "THREE-QUARTER ANGLE", label: "四分之三角", description: "[主题]（四分之三角度拍摄：相机与拍摄对象成 45 度角，显示正面和侧面。创造深度、维度和自然、讨人喜欢的视角。）" },
+                { tag: "PROFILE ANGLE", label: "轮廓角", description: "[主体]（侧面照：相机从纯侧面捕捉主体，呈现完整的轮廓。强调面部特征、身体轮廓和背景轮廓。）" },
+                { tag: "DIAGONAL ANGLE", label: "对角", description: "[主题]（强烈的对角线布局：构图将主题沿着大胆的对角线路径定位，增强画面内的能量和流动。）" },
+                { tag: "TILT-UP ANGLE", label: "倾斜角度", description: "[主体]（倾斜构图：相机从较低位置向上倾斜，从下到上逐渐显露出主体。创造出期待、宏伟或显露的运动。）" },
+                { tag: "TILT-DOWN ANGLE", label: "向下倾斜角度", description: "[主题]（向下倾斜构图：相机从较高位置向下倾斜，从上到下显示主题。创建调查、评估或下降视角。）" },
+                { tag: "POV ANGLE", label: "视角角度", description: "[主题]（视点拍摄：摄像机的位置精确地复制角色眼睛的视角。通过角色的视点创造身临其境的主观体验。）" },
+                { tag: "REVERSE POV ANGLE", label: "反向视角角度", description: "[主题]（反向 POV 镜头：摄像机显示 POV 角色正在注视的内容。揭示角色凝视的主题，完成视角之间的视觉对话。）" },
+                { tag: "BACK-TO-CAMERA ANGLE", label: "后摄角度", description: "[主题]（背对相机拍摄：主题背对相机，背对镜头。创建匿名、沉思或分享主题的前瞻视角。）" }
+            ],
+            shots: [
+                { tag: "EXTREME WIDE SHOT", label: "超广角镜头", description: "[主体]（超广角镜头：相机距离主体很远，展示广阔的环境。主体在广阔的风景中显得很小，强调规模和背景。）" },
+                { tag: "WIDE SHOT", label: "广角镜头", description: "[主体]（广角镜头：相机完全捕捉环境中的主体，显示完整的身体和周围空间。建立位置、背景和空间关系。）" },
+                { tag: "LONG SHOT", label: "远射", description: "[主体]（远景：相机放置在远处，显示从头到脚的完整主体与周围空间。平衡主体的存在与环境背景。）" },
+                { tag: "FULL BODY SHOT", label: "全身照", description: "[主体]（全身拍摄：相机取景捕捉主体从头到脚的整个身体。在框架内展示完整的身体存在、姿势和肢体语言。）" },
+                { tag: "MEDIUM LONG SHOT", label: "中远景", description: "[拍摄对象]（中长镜头：相机从大约膝盖向上的位置拍摄拍摄对象。通常称为“牛仔镜头”，平衡肢体语言可见性与面部细节。）" },
+                { tag: "MEDIUM SHOT", label: "中景", description: "[主题]（中景：相机从腰部以上拍摄主题，显示躯干、手臂和头部。平衡面部表情与肢体语言和手势。）" },
+                { tag: "MEDIUM CLOSE-UP", label: "中景特写", description: "[主体]（中特写镜头：相机从胸部向上拍摄主体，强调脸部，同时包括肩膀。亲密但保持一些身体背景。）" },
+                { tag: "CLOSE-UP", label: "特写", description: "[拍摄对象]（特写：相机放置在非常靠近拍摄对象的位置，捕捉画面中的所有拍摄对象。）" },
+                { tag: "EXTREME CLOSE-UP", label: "极端特写", description: "[主题]（极端特写镜头：相机框架非常紧密地聚焦于特定细节——眼睛、嘴巴、手或物体。创造强烈的亲密感、强调或戏剧性的焦点。）" },
+                { tag: "MACRO SHOT", label: "微距拍摄", description: "[主题]（微距拍摄：将带有微距镜头的相机放置在非常靠近小主体的位置，揭示肉眼看不见的微小细节。创造抽象、详细、放大的视角。）" },
+                { tag: "COWBOY SHOT", label: "牛仔射击", description: "[主题]（牛仔镜头：摄像机从大腿中部向上取景，传统上在西方电影中展示枪带。强调姿势、准备状态和肢体语言。）" },
+                { tag: "KNEE SHOT", label: "膝盖射击", description: "[主体]（膝盖镜头：相机从膝盖向上拍摄主体，展示大部分身体，同时保留面部细节。提供强烈的物理存在感。）" },
+                { tag: "SHOULDER SHOT", label: "肩部射击", description: "[拍摄对象]（肩部拍摄：相机从肩部向上拍摄拍摄对象，重点关注脸部和上半身。在保持个人空间边界的同时创造亲密感。）" },
+                { tag: "BUST SHOT", label: "半身照", description: "[主体]（半身照：相机从胸部向上取景，捕捉头部、颈部和上半身。经典的肖像取景强调面部表情和上半身。）" },
+                { tag: "HEADSHOT", label: "爆头", description: "[拍摄对象]（爆头：相机紧紧地拍摄拍摄对象的头部和面部，从头顶到下巴下方填充整个画面。最大限度地展现面部细节和情感亲密感。）" },
+                { tag: "TIGHT SHOT", label: "近射", description: "[拍摄对象]（近景拍摄：相机与拍摄对象极其接近，周围空间极小。创造出幽闭恐怖、强烈或高度聚焦的构图。）" }
+            ],
+            composition: [
+                { tag: "CENTERED COMPOSITION", label: "居中构图", description: "[主体]（居中构图：主体位于画面正中央，形成对称、平衡、正式的排列。强调主体的重要性和稳定性。）" },
+                { tag: "RULE-OF-THIRDS COMPOSITION", label: "三分法构图", description: "[主题]（三分法构图：框架分为 3x3 网格，主题沿网格线或交叉点定位。创建平衡、自然、视觉上令人愉悦的排列。）" },
+                { tag: "SYMMETRICAL SHOT", label: "对称射击", description: "[主题]（对称镜头：中轴两侧镜像平衡元素的构图。创造和谐、正式和审美完美。）" },
+                { tag: "ASYMMETRICAL SHOT", label: "不对称镜头", description: "[主题]（不对称镜头：元素分布不平衡的构图，产生视觉张力。通过有意的不平衡产生动态兴趣。）" },
+                { tag: "MINIMALIST SHOT", label: "极简主义镜头", description: "[主题]（极简镜头：用最少的元素构图，丰富的留白，简单的形式。通过减少和负空间强调主题。）" },
+                { tag: "BUSY COMPOSITION", label: "忙碌的作文", description: "[主题]（繁忙的构图：框架充满了多种元素、细节和视觉信息。创造复杂性、能量或压倒性的感官体验。）" },
+                { tag: "NEGATIVE SPACE SHOT", label: "负空间镜头", description: "[主题]（负空间镜头：构图强调主题周围的空白区域，使用空虚作为设计元素。创造隔离、焦点或呼吸空间。）" },
+                { tag: "LEADING LINES SHOT", label: "引导线镜头", description: "[主题]（引导线构图：画面内的视线引导观看者的眼睛看向主题。创造深度、方向和有目的的视觉流动。）" },
+                { tag: "FOREGROUND FRAMING SHOT", label: "前景取景镜头", description: "[主题]（前景取景镜头：前景中的元素在主题周围创建自然的框架。增加深度、背景，并将注意力引向主要主题。）" },
+                { tag: "OVER-THE-SHOULDER SHOT", label: "过肩镜头", description: "[主题]（过肩拍摄：相机位于一个拍摄对象的肩膀后面，看着另一个拍摄对象。创建对话视角和空间关系。）" },
+                { tag: "REACTION SHOT", label: "反应镜头", description: "[主题]（反应镜头：摄像机捕捉主题对屏幕外动作或对话的反应。强调情绪反应和角色视角。）" },
+                { tag: "TWO-SHOT", label: "两次射击", description: "[主题]（双镜头：相机在同一构图中拍摄两个主题。建立角色之间的关系、互动或比较。）" },
+                { tag: "THREE-SHOT", label: "三枪", description: "[主题]（三镜头：相机在构图中拍摄三个主体，展现群体动态。创建三角视觉关系和社交互动。）" },
+                { tag: "GROUP SHOT", label: "集体照", description: "[主题]（集体照：相机捕捉在画面中排列在一起的多个主题。强调集体存在、社区或整体动态。）" }
+            ],
+            movement: [
+                { tag: "TRACKING SHOT", label: "追踪拍摄", description: "[主题]（跟踪拍摄美学：构图建议相机横向跟随拍摄对象移动。创造动态的运动感、追逐感或伴奏感。）" },
+                { tag: "DOLLY SHOT", label: "多莉射击", description: "[主体]（多莉拍摄风格：构图意味着相机在轨道上物理地靠近或远离主体移动。随着深度变化创建平滑的接近或后退。）" },
+                { tag: "CRANE SHOT", label: "起重机射击", description: "[主题]（起重机拍摄视角：构图建议将相机放置在起重机上，能够进行垂直和水平移动。创造宏伟、升高的电影视角。）" },
+                { tag: "BOOM SHOT", label: "爆炸射击", description: "[主题]（吊臂拍摄风格：构图暗示摄像机位于吊臂上，垂直移动。创建上升或下降的视角，并具有戏剧性的展现。）" },
+                { tag: "ZOOM SHOT", label: "变焦拍摄", description: "[主题]（变焦拍摄美学：构图暗示焦距变化，看起来更近或更远。产生强度增加或戏剧性的距离变化。）" },
+                { tag: "PUSH-IN SHOT", label: "推入射门", description: "[主题]（推入式构图：构图建议相机稳步靠近拍摄对象。营造紧张感、亲密感或集中注意力。）" },
+                { tag: "PULL-BACK SHOT", label: "后撤投篮", description: "[主题]（后拉构图：取景建议相机远离主题，揭示背景。创造启示、范围扩展或孤立。）" },
+                { tag: "PAN SHOT", label: "平移拍摄", description: "[主题]（平移拍摄风格：构图意味着摄像机在场景中水平旋转。创建全面的调查、景观揭示或空间探索。）" },
+                { tag: "TILT SHOT", label: "倾斜拍摄", description: "[主题]（倾斜拍摄美学：构图建议垂直相机旋转，向上或向下扫描。创造高度揭示或垂直空间探索。）" },
+                { tag: "ARC SHOT", label: "弧光射击", description: "[主题]（弧形镜头构图：取景建议相机在围绕主题的弯曲路径中移动。创建维度揭示、动态透视和圆周运动。）" },
+                { tag: "360-DEGREE SHOT", label: "360 度拍摄", description: "[主题]（360 度视角：构图意味着围绕主题的完整圆形相机路径。创建全面的空间理解和动态旋转。）" },
+                { tag: "STATIC SHOT", label: "静态拍摄", description: "[主题]（静态拍摄：相机固定在单一位置而不移动。创造稳定性、观察力以及深思熟虑的构图。）" }
+            ],
+            lens: [
+                { tag: "WIDE-ANGLE SHOT", label: "广角拍摄", description: "[主题]（广角镜头拍摄：构图显示出扩大的视野，并伴有轻微的桶形畸变。夸大了空间、深度和环境范围。）" },
+                { tag: "ULTRA-WIDE SHOT", label: "超广角镜头", description: "[主题]（超广角镜头拍摄：视野极其广阔、桶形畸变明显的构图。营造出戏剧性的空间夸张和身临其境的视角。）" },
+                { tag: "FISHEYE SHOT", label: "鱼眼拍摄", description: "[主题]（鱼眼镜头镜头：具有球面畸变的构图，创造出圆形、凸出的视角。戏剧性地扭曲空间，创造出超现实、身临其境的视角。）" },
+                { tag: "TELEPHOTO SHOT", label: "长焦拍摄", description: "[主题]（长焦镜头拍摄：压缩透视、扁平深度和狭窄视野的构图。用美丽的模糊背景创建孤立的主题。）" },
+                { tag: "PORTRAIT-LENS SHOT", label: "人像镜头拍摄", description: "[主题]（人像镜头拍摄：景深较浅的构图，主体在柔和模糊的背景下清晰。创造令人愉悦的散景和主体隔离。）" },
+                { tag: "MACRO-LENS SHOT", label: "微距镜头拍摄", description: "[主题]（微距镜头拍摄：在极近距离捕捉小主体的极端细节的构图。以最小的景深展现微观纹理和细节。）" },
+                { tag: "TILT-SHIFT SHOT", label: "移轴拍摄", description: "[主题]（移轴镜头拍摄：具有选择性焦平面的构图，创造微型效果或校正透视。产生梦幻般的、玩具般的或建筑校正的视图。）" },
+                { tag: "ANAMORPHIC SHOT", label: "变形镜头", description: "[主题]（变形镜头镜头：具有特有的宽高比、水平镜头光晕和椭圆形散景的构图。创造电影般的优质视觉美感。）" }
+            ],
+            special: [
+                { tag: "FIRST-PERSON SHOT", label: "第一人称射击", description: "[主题]（第一人称视角：摄像机代表角色自己的眼睛，展示他们所看到的内容。创造身临其境的主观体验。）" },
+                { tag: "THIRD-PERSON SHOT", label: "第三人称射击", description: "[主体]（第三人称视角：摄像机从身体外部观察主体。创建从外部位置观察角色的客观视角。）" },
+                { tag: "OBJECT POV SHOT", label: "对象视角拍摄", description: "[主题]（物体 POV 拍摄：相机定位在无生命物体的视角，从物体的“视角”显示场景。创造不寻常的、创造性的视角。）" },
+                { tag: "DRONE SHOT", label: "无人机拍摄", description: "[主题]（无人机拍摄视角：高架鸟瞰图，具有流畅、漂浮的品质。创造具有当代审美的一览无余的鸟瞰视角。）" },
+                { tag: "SURVEILLANCE CAMERA SHOT", label: "监控摄像头拍摄", description: "[主题]（监控摄像头角度：高角安装视角，具有广角失真、时间戳叠加美感。创建偷窥、安全监控视角。）" },
+                { tag: "SECURITY CAM ANGLE", label: "安全凸轮角度", description: "[主题]（安全摄像头视角：具有颗粒质量的固定高角度视角，暗示闭路电视录像。创建纪录片、监控或发现的录像美感。）" },
+                { tag: "DASHCAM ANGLE", label: "行车记录仪角度", description: "[主题]（行车记录仪视角：车辆仪表板的前向视图，显示前方道路。从驾驶员位置创建具有特征广角的视角。）" },
+                { tag: "BODYCAM ANGLE", label: "摄像机角度", description: "[主题]（摄像机视角：胸部高度的 POV，轻微反弹，显示前方视图，部分身体可见。创造纪录片、执法或动作美学。）" },
+                { tag: "HELMET CAM SHOT", label: "头盔摄像头拍摄", description: "[主题]（头盔摄像头视角：头戴式视点从主题的头部位置显示第一人称视角。创造极限运动、动作或身临其境的冒险美感。）" },
+                { tag: "MICROSCOPE POV", label: "显微镜视角", description: "[主题]（显微镜视角：极端放大显示带有圆形小插图的微观细节。为微小物体创建科学、详细的视角。）" },
+                { tag: "TELESCOPE POV", label: "望远镜视角", description: "[主题]（望远镜视点：通过圆形小插图的远景，显示放大的远处物体。创建天文、监视或远距离观察视角。）" }
+            ]
+        };
+
+        // Current editing card and category
+        let currentEditCard = null;
+        let currentEditCategory = null;
+
+        // DOM elements
+        const copyMessage = document.getElementById('copy-message');
+        const editModal = document.getElementById('edit-modal');
+        const editText = document.getElementById('edit-text');
+        const saveEdit = document.getElementById('save-edit');
+        const cancelEdit = document.getElementById('cancel-edit');
+        const searchInput = document.getElementById('search');
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFromLocalStorage();
+            renderPrompts();
+            setupEventListeners();
+        });
+
+        // Save to localStorage
+        function saveToLocalStorage() {
+            localStorage.setItem('promptsData', JSON.stringify(prompts));
+        }
+
+        // Load from localStorage
+        function loadFromLocalStorage() {
+            const data = localStorage.getItem('promptsData');
+            if (data) {
+                Object.assign(prompts, JSON.parse(data));
+            }
+        }
+
+        // Render all prompts to the page
+        function renderPrompts() {
+            for (const [category, promptList] of Object.entries(prompts)) {
+                const grid = document.getElementById(`${category}-grid`);
+                grid.innerHTML = '';
+                promptList.forEach(prompt => {
+                    const card = createPromptCard(prompt, category);
+                    grid.appendChild(card);
+                });
+            }
+        }
+
+        // Image filename mappings for special cases
+        const imageNameMap = {
+            'CRANE SHOT': 'CRN-SHOT',
+            'BOOM SHOT': 'BOOM-SHOT',
+            'ZOOM SHOT': 'ZOOM-SHOT',
+            'SURVEILLANCE CAMERA SHOT': 'SVC',
+            'MICROSCOPE POV': 'MSC-POV',
+            'TELESCOPE POV': 'TSC-POV',
+            'LONG SHOT': 'LONG-SHOT'
+        };
+
+        // Create a prompt card element
+        function createPromptCard(prompt, category) {
+            const card = document.createElement('div');
+            card.className = 'prompt-card';
+            card.dataset.category = category;
+            card.dataset.tag = prompt.tag;
+
+            // Image
+            const img = document.createElement('img');
+            img.className = 'prompt-image';
+            // Use mapping if available, otherwise convert tag to filename
+            const baseName = imageNameMap[prompt.tag] || prompt.tag.replace(/ /g, '_');
+            // Try PNG first, fallback to JPG
+            img.src = `images/${baseName}.png`;
+            img.onerror = () => {
+                img.src = `images/${baseName}.jpg`;
+                img.onerror = () => { img.style.display = 'none'; };
+            };
+            card.appendChild(img);
+
+            // Tag
+            const tag = document.createElement('span');
+            tag.className = 'prompt-tag';
+            tag.textContent = prompt.label || prompt.tag;
+            card.appendChild(tag);
+
+            // Description
+            const desc = document.createElement('p');
+            desc.className = 'prompt-description';
+            desc.textContent = prompt.description;
+            card.appendChild(desc);
+
+            // Edit buttons
+            const editButtons = document.createElement('div');
+            editButtons.className = 'edit-buttons';
+            const editBtn = document.createElement('button');
+            editBtn.textContent = '编辑';
+            editBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openEditModal(card, category);
+            });
+            editButtons.appendChild(editBtn);
+            card.appendChild(editButtons);
+
+            // Click to copy
+            card.addEventListener('click', () => {
+                copyPrompt(card);
+            });
+
+            return card;
+        }
+
+        // Copy prompt to clipboard
+        function copyPrompt(card) {
+            const tag = card.querySelector('.prompt-tag').textContent;
+            const desc = card.querySelector('.prompt-description').textContent;
+            const fullPrompt = `${tag}: ${desc}`;
+
+            navigator.clipboard.writeText(fullPrompt).then(() => {
+                copyMessage.classList.add('show');
+                setTimeout(() => {
+                    copyMessage.classList.remove('show');
+                }, 1500);
+                card.style.backgroundColor = '#a5d6a7';
+                setTimeout(() => {
+                    card.style.backgroundColor = '';
+                }, 200);
+            });
+        }
+
+        // Open edit modal
+        function openEditModal(card, category) {
+            currentEditCard = card;
+            currentEditCategory = category;
+            const tag = card.querySelector('.prompt-tag').textContent;
+            const desc = card.querySelector('.prompt-description').textContent;
+            editText.value = `${tag}\n${desc}`;
+            editModal.style.display = 'block';
+        }
+
+        // Save edited prompt
+        function saveEditedPrompt() {
+            const lines = editText.value.split('\n');
+            const tag = lines[0];
+            const description = lines.slice(1).join('\n');
+
+            // Update the card
+            currentEditCard.querySelector('.prompt-tag').textContent = tag;
+            currentEditCard.querySelector('.prompt-description').textContent = description;
+
+            // Update the data
+            const category = currentEditCategory;
+            const index = prompts[category].findIndex(p => p.tag === currentEditCard.dataset.tag);
+            if (index !== -1) {
+                prompts[category][index].label = tag;
+                prompts[category][index].description = description;
+                currentEditCard.dataset.tag = tag;
+            }
+
+            editModal.style.display = 'none';
+            saveToLocalStorage();
+        }
+
+// Setup event listeners
+function setupEventListeners() {
+    saveEdit.addEventListener('click', saveEditedPrompt);
+    cancelEdit.addEventListener('click', () => {
+        editModal.style.display = 'none';
+    });
+
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        // Filter cards by TAG only
+        document.querySelectorAll('.prompt-card').forEach(card => {
+            const tag = card.querySelector('.prompt-tag').textContent.toLowerCase();
+            card.style.display = tag.includes(searchTerm) ? 'block' : 'none';
+        });
+
+        // Hide categories with no visible cards
+        document.querySelectorAll('.category').forEach(category => {
+            const cards = category.querySelectorAll('.prompt-card');
+            const hasVisibleCards = Array.from(cards).some(card => card.style.display !== 'none');
+            category.style.display = hasVisibleCards ? 'block' : 'none';
+        });
+    });
+
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '浅色模式' : '深色模式';
+    });
+}
+
+    </script>
+</body>
+</html>
