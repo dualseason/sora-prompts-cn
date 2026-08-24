@@ -69,6 +69,8 @@ nav a { color: var(--book-muted) !important; text-decoration: none !important; }
 nav a:hover { color: var(--book-green) !important; }
 .theme-toggle { border:1px solid var(--book-line); background:transparent; color:var(--book-muted); padding:7px 12px; border-radius:4px; font:inherit; font-size:13px; cursor:pointer; }
 .theme-toggle:hover { color:var(--book-green); border-color:var(--book-green); }
+.theme-toggle { min-width:78px; margin-left:6px; padding:7px 14px; border-radius:999px; white-space:nowrap; text-align:center; }
+.plain-header .theme-toggle { margin-left:4px; }
 
 .book-hero,
 .course-head,
