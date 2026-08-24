@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="中文 AI 电影与自媒体工作流课程。">
+  <title>课程加载中｜自媒体电影工作流</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root { --ink:#17202a; --muted:#65717d; --paper:#f7f8f5; --line:#dfe4df; --accent:#176b5b; --soft:#e0f0eb; --warm:#d56b3d; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.9 "Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif; }
+    a { color:var(--accent); }
+    header { background:#fff; border-bottom:1px solid var(--line); }
+    .bar, main { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    .bar { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { color:var(--ink); font-weight:750; text-decoration:none; white-space:nowrap; }
+    nav { display:flex; gap:18px; flex-wrap:wrap; justify-content:flex-end; }
+    nav a { color:var(--muted); font-size:14px; text-decoration:none; white-space:nowrap; }
+    .course-head { padding:58px 0 42px; background:#fff; border-bottom:1px solid var(--line); }
+    .eyebrow { margin:0 0 12px; color:var(--warm); font-size:13px; font-weight:750; }
+    h1 { max-width:820px; margin:0; font-size:clamp(34px,5vw,58px); line-height:1.25; letter-spacing:0; }
+    .lead { max-width:760px; margin:18px 0 0; color:var(--muted); font-size:18px; }
+    .layout { display:grid; grid-template-columns:210px minmax(0,1fr); gap:64px; padding-top:46px; }
+    aside { position:sticky; top:20px; align-self:start; }
+    aside h2 { margin:0 0 12px; font-size:15px; }
+    aside a { display:block; padding:5px 0; color:var(--muted); font-size:14px; text-decoration:none; }
+    article { min-width:0; padding-bottom:70px; }
+    article h1 { display:none; }
+    article h2 { margin:52px 0 15px; padding-top:16px; border-top:1px solid var(--line); font-size:29px; line-height:1.45; }
+    article h3 { margin-top:32px; font-size:22px; line-height:1.5; }
+    article h4 { margin-top:24px; font-size:18px; }
+    article p, article ul, article ol, article table { max-width:850px; }
+    article blockquote { margin:24px 0; padding:12px 18px; color:#4f625d; background:var(--soft); border-left:3px solid var(--accent); }
+    article pre { overflow:auto; padding:18px 20px; color:#edf4ef; background:#182b2a; border-left:4px solid var(--warm); border-radius:4px; line-height:1.8; }
+    article code { padding:2px 5px; background:#eef1ee; border-radius:3px; }
+    article pre code { padding:0; color:inherit; background:none; }
+    table { width:100%; border-collapse:collapse; margin:20px 0; font-size:14px; }
+    th, td { padding:10px 12px; border:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:var(--soft); font-weight:700; }
+    footer { padding:28px 0 48px; color:var(--muted); border-top:1px solid var(--line); font-size:14px; }
+    @media (max-width:760px) {
+      .bar, main { width:min(100% - 28px, 1120px); }
+      .bar { align-items:flex-start; padding:15px 0; }
+      nav { gap:6px 14px; }
+      .course-head { padding:42px 0 34px; }
+      .layout { grid-template-columns:1fr; gap:0; padding-top:30px; }
+      aside { display:none; }
+      article h2 { font-size:25px; }
+      th, td { padding:8px; }
+    }
+  </style>
+</head>
+<body>
+  <header><div class="bar">
+    <a class="brand" href="./">自媒体电影工作流</a>
+    <nav>
+      <a href="./course.html?doc=prompt-course.md">提示词课</a>
+      <a href="./course.html?doc=ai-media-course.md">AI 自媒体课</a>
+      <a href="./image-prompts.html">图片图库</a>
+    </nav>
+  </div></header>
+  <section class="course-head"><main>
+    <p class="eyebrow">中文长课</p>
+    <h1 id="title">课程加载中</h1>
+    <p class="lead" id="lead">正在载入课程内容……</p>
+  </main></section>
+  <main class="layout">
+    <aside><h2>章节导航</h2><div id="toc"></div></aside>
+    <article id="content"><p>正在载入课程内容……</p></article>
+  </main>
+  <footer><main>Seedance 2.0 系列、Seedance 2.5 与 MiniMax H3 的学习资料。平台参数和模型能力会更新，请以实际界面与官方文档为准。</main></footer>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const doc = params.get('doc') || 'prompt-course.md';
+    const names = {
+      'prompt-course.md': ['第一节课：AI 电影提示词', '从图片提示词到 Seedance 与 MiniMax H3 的可执行提示词。'],
+      'ai-media-course.md': ['第二节课：AI 自媒体电影生产', '从账号定位、选题脚本到生成、剪辑、发布和复盘。']
+    };
+    const meta = names[doc] || names['prompt-course.md'];
+    document.title = meta[0] + '｜自媒体电影工作流';
+    document.getElementById('title').textContent = meta[0];
+    document.getElementById('lead').textContent = meta[1];
+    fetch('./' + doc).then(function (response) {
+      if (!response.ok) throw new Error('课程加载失败');
+      return response.text();
+    }).then(function (markdown) {
+      marked.setOptions({ headerIds: true, mangle: false });
+      document.getElementById('content').innerHTML = marked.parse(markdown);
+      const toc = document.getElementById('toc');
+      document.querySelectorAll('#content h2, #content h3').forEach(function (heading) {
+        const link = document.createElement('a');
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent;
+        toc.appendChild(link);
+      });
+    }).catch(function () {
+      document.getElementById('content').innerHTML = '<p>课程加载失败，请直接打开 <a href="./' + doc + '">' + doc + '</a>。</p>';
+    });
+  </script>
+</body>
+</html>
