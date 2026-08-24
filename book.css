@@ -9,6 +9,17 @@
   --book-rust: #b75d38;
   --book-shadow: 0 18px 50px rgba(38, 50, 46, .08);
 }
+body.dark-theme {
+  --book-ink: #edf4ef;
+  --book-muted: #b5c5bf;
+  --book-paper: #172321;
+  --book-page: #20312e;
+  --book-line: #3d5650;
+  --book-green: #9bd1bf;
+  --book-green-soft: #29403b;
+  --book-rust: #f1a47e;
+  --book-shadow: 0 18px 50px rgba(0, 0, 0, .2);
+}
 
 html { scroll-behavior: smooth; }
 body {
@@ -17,6 +28,17 @@ body {
   font-family: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif !important;
   line-height: 1.95 !important;
 }
+body.dark-theme .book-topbar,
+body.dark-theme .site-header,
+body.dark-theme .topbar,
+body.dark-theme .course-head,
+body.dark-theme .hero,
+body.dark-theme .book-hero { background: var(--book-page) !important; }
+body.dark-theme .book-card,
+body.dark-theme .book-article,
+body.dark-theme article { background: var(--book-page) !important; }
+body.dark-theme .book-article code,
+body.dark-theme article code { background: #29403b !important; color: #f1c3a3 !important; }
 
 .book-topbar,
 .site-header,
@@ -45,6 +67,8 @@ nav a { color: var(--book-muted) !important; text-decoration: none !important; }
 .site-back:hover,
 .top-link:hover,
 nav a:hover { color: var(--book-green) !important; }
+.theme-toggle { border:1px solid var(--book-line); background:transparent; color:var(--book-muted); padding:7px 12px; border-radius:4px; font:inherit; font-size:13px; cursor:pointer; }
+.theme-toggle:hover { color:var(--book-green); border-color:var(--book-green); }
 
 .book-hero,
 .course-head,
@@ -115,6 +139,10 @@ article td { border-color: var(--book-line) !important; }
 article th { background: var(--book-green-soft) !important; }
 
 .book-shelf { width: min(1080px, calc(100% - 48px)); margin: 0 auto; padding: 70px 0 100px; }
+.book-shelf-intro { margin-bottom: 28px; }
+.book-shelf-intro span { display:block; margin-bottom:6px; color:var(--book-rust); font-size:13px; letter-spacing:.12em; }
+.book-shelf-intro strong { display:block; color:var(--book-ink); font-family:"Noto Serif SC","Songti SC",serif; font-size:26px; font-weight:700; }
+.book-shelf-intro p { max-width:650px; margin:6px 0 0; color:var(--book-muted); }
 .book-shelf-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
 .book-card { display: flex; flex-direction: column; min-height: 310px; padding: 30px; background: var(--book-page); border: 1px solid var(--book-line); box-shadow: var(--book-shadow); text-decoration: none; color: var(--book-ink); }
 .book-card:hover { border-color: var(--book-green); transform: translateY(-2px); transition: .2s ease; }
@@ -148,4 +176,5 @@ footer { background: transparent !important; border-top: 1px solid var(--book-li
   .book-article, article { padding: 30px 22px 52px !important; box-shadow: none !important; }
   .book-shelf-grid { grid-template-columns: 1fr; }
   .book-card { min-height: 260px; padding: 24px; }
+  .theme-toggle { padding:6px 9px; }
 }
