@@ -248,16 +248,12 @@
     <link rel="stylesheet" href="./book.css?v=4">
 </head>
 <body>
-    <header class="site-header">
-        <div class="site-header-inner">
-            <a class="site-brand" href="./">自媒体电影工作流</a>
-            <a class="site-back" href="./">返回视频教程</a>
-            <button class="theme-toggle" data-theme-toggle type="button">切换暗色</button>
+    <header class="plain-header">
+        <div class="plain-header-inner">
+            <a class="plain-brand" href="./">自媒体电影工作流</a>
+            <nav><a href="./seedance-workflow.html">流程总览</a><a href="./image-prompts.html">图片图库</a><button class="theme-toggle" data-theme-toggle type="button">切换暗色</button></nav>
         </div>
     </header>
-    <div class="dark-mode-toggle">
-        <button id="dark-mode-toggle">深色模式</button>
-    </div>
     <div class="container">
         <h1>图片生成镜头提示词图库</h1>
         <p class="intro">按镜头角度、景别、构图、运动和透视方式整理的图片生成参考。点击任意卡片即可复制中文提示词。</p>
@@ -600,10 +596,12 @@ function setupEventListeners() {
         });
     });
 
-    darkModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '浅色模式' : '深色模式';
-    });
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '浅色模式' : '深色模式';
+        });
+    }
 }
 
     </script>
