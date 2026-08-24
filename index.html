@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="中文电影级 Sora 视频提示词教程与 250+ 条提示词合集。">
-  <title>Sora 电影级视频提示词教程</title>
+  <meta name="description" content="Seedance 2.0、2.0 Mini、2.0 Fast、2.5 与 MiniMax H3 中文自媒体电影工作流程教程。">
+  <title>Seedance 与 MiniMax H3 自媒体电影教程</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     :root { --ink:#17202a; --muted:#65717d; --paper:#f7f8f5; --line:#dfe4df; --accent:#176b5b; --accent-soft:#e0f0eb; --warm:#d56b3d; }
@@ -62,24 +62,24 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="./">Sora 提示词教程</a>
+      <a class="brand" href="./">自媒体电影工作流</a>
       <nav>
         <a class="top-link" href="./image-prompts.html">图片镜头图库</a>
-        <a class="top-link" href="./Sora-prompts.md">查看完整文档</a>
+        <a class="top-link" href="./seedance-workflow.md">查看完整教程</a>
       </nav>
     </div>
   </header>
   <section class="hero">
     <main class="hero-grid">
       <div>
-        <p class="eyebrow">Sora 电影提示词教程</p>
+        <p class="eyebrow">Seedance 系列 · MiniMax H3</p>
         <h1>把想法写成<br>电影画面</h1>
-        <p class="hero-copy">一份面向中文创作者的 Sora 视频提示词教程：从景别、镜头运动到灯光和叙事结构，并附带 250+ 条可直接使用的中文提示词。</p>
+        <p class="hero-copy">一份面向中文创作者的自媒体电影工作流教程：从图片提示词、角色和场景参考图，到脚本、分镜、Seedance 2.0 系列、Seedance 2.5、MiniMax H3 和后期剪辑。</p>
       </div>
       <div class="hero-aside">
         <strong>先掌握镜头，再描述故事</strong>
         <p>好的提示词不只是堆砌形容词，而是把主体、动作、镜头、光线和情绪组织成一个可执行的视觉计划。</p>
-        <p><a href="./image-prompts.html">进入图片镜头提示词图库 →</a></p>
+        <p><a href="./seedance-workflow.md">开始学习完整工作流程 →</a></p>
       </div>
     </main>
   </section>
@@ -87,7 +87,7 @@
     <aside>
       <h2>本页导航</h2>
       <a href="#guide">教程正文</a>
-      <a href="#prompt-list">提示词合集</a>
+      <a href="#prompt-list">模型与提示词</a>
       <a href="#9-最佳实践与技巧">最佳实践</a>
     </aside>
     <section>
@@ -100,16 +100,16 @@
       <div id="prompt-list"></div>
     </section>
   </main>
-  <footer><main>提示词代码块已翻译为中文，方便直接复制到 Sora 使用。内容采用知识共享署名-相同方式共享 4.0 国际许可协议。</main></footer>
+  <footer><main>教程覆盖 Seedance 2.0 系列、Seedance 2.5 与 MiniMax H3；图片和视频提示词均已中文化。内容采用知识共享署名-相同方式共享 4.0 国际许可协议。</main></footer>
   <script>
-    fetch('./Sora-prompts.md')
+    fetch('./seedance-workflow.md')
       .then(function (response) { if (!response.ok) throw new Error('文档加载失败'); return response.text(); })
       .then(function (markdown) {
         marked.setOptions({ headerIds: true, mangle: false });
         document.getElementById('content').innerHTML = marked.parse(markdown);
       })
       .catch(function () {
-        document.getElementById('content').innerHTML = '<p>教程加载失败，请直接打开 <a href="./Sora-prompts.md">中文 Markdown 文档</a>。</p>';
+        document.getElementById('content').innerHTML = '<p>教程加载失败，请直接打开 <a href="./seedance-workflow.md">中文 Markdown 文档</a>。</p>';
       });
   </script>
 </body>
