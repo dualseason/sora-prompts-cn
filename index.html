@@ -88,10 +88,7 @@
   <main class="layout">
     <aside>
       <h2>本页导航</h2>
-      <a href="./course.html?doc=prompt-course.md">提示词课</a>
-      <a href="./course.html?doc=ai-media-course.md">AI 自媒体课</a>
-      <a href="#prompt-list">模型与提示词</a>
-      <a href="#9-最佳实践与技巧">最佳实践</a>
+      <div id="toc"></div>
     </aside>
     <section>
       <div class="intro" id="guide">
@@ -110,9 +107,16 @@
       .then(function (markdown) {
         marked.setOptions({ headerIds: true, mangle: false });
         document.getElementById('content').innerHTML = marked.parse(markdown);
+        var toc = document.getElementById('toc');
+        document.querySelectorAll('#content h2, #content h3').forEach(function (heading) {
+          var link = document.createElement('a');
+          link.href = '#' + heading.id;
+          link.textContent = heading.textContent;
+          toc.appendChild(link);
+        });
       })
       .catch(function () {
-        document.getElementById('content').innerHTML = '<p>教程加载失败，请直接打开 <a href="./seedance-workflow.md">中文 Markdown 文档</a>。</p>';
+        document.getElementById('content').innerHTML = '<p>教程加载失败，请打开 <a href="./seedance-workflow.html">流程总览页面</a>。</p>';
       });
   </script>
 </body>
