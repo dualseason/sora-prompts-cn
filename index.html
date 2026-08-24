@@ -58,66 +58,35 @@
       article h2 { font-size:25px; }
     }
   </style>
+  <link rel="stylesheet" href="./book.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="./">自媒体电影工作流</a>
-      <nav>
-        <a class="top-link" href="./course.html?doc=prompt-course.md">提示词课</a>
-        <a class="top-link" href="./course.html?doc=ai-media-course.md">AI 自媒体课</a>
-        <a class="top-link" href="./seedance-workflow.html">流程总览</a>
-        <a class="top-link" href="./image-prompts.html">图片镜头图库</a>
-      </nav>
+  <header class="book-topbar"><div class="book-topbar-inner">
+    <a class="book-brand" href="./">自媒体电影工作流</a>
+    <nav class="book-nav"><a href="./seedance-workflow.html">流程总览</a><a href="./image-prompts.html">图片图库</a></nav>
+  </div></header>
+  <section class="book-hero"><div class="book-hero-inner">
+    <p class="book-kicker">Seedance 系列 · MiniMax H3</p>
+    <h1 class="book-title">把想法写成一部<br>能发布的 AI 电影</h1>
+    <p class="book-lead">两节长课，一条完整路径：先学会提示词和镜头，再学会选题、脚本、生成、剪辑与发布。</p>
+  </div></section>
+  <main class="book-shelf">
+    <div class="book-shelf-grid">
+      <a class="book-card" href="./course.html?doc=prompt-course.md">
+        <span class="number">第一节课 / PROMPT</span>
+        <h2>AI 电影提示词</h2>
+        <p>从图片提示词、角色和场景参考图开始，学习镜头语言、Seedance 2.0 系列、2.5 与 MiniMax H3 的提示词结构。</p>
+        <span class="read">开始阅读 →</span>
+      </a>
+      <a class="book-card" href="./course.html?doc=ai-media-course.md">
+        <span class="number">第二节课 / PRODUCTION</span>
+        <h2>AI 自媒体电影生产</h2>
+        <p>从账号定位、选题、脚本、分镜到生成、配音、剪辑、封面、发布和数据复盘，建立可重复的生产系统。</p>
+        <span class="read">开始阅读 →</span>
+      </a>
     </div>
-  </header>
-  <section class="hero">
-    <main class="hero-grid">
-      <div>
-        <p class="eyebrow">Seedance 系列 · MiniMax H3</p>
-        <h1>把想法写成<br>电影画面</h1>
-        <p class="hero-copy">一份面向中文创作者的自媒体电影工作流教程：从图片提示词、角色和场景参考图，到脚本、分镜、Seedance 2.0 系列、Seedance 2.5、MiniMax H3 和后期剪辑。</p>
-      </div>
-      <div class="hero-aside">
-        <strong>先掌握镜头，再描述故事</strong>
-        <p>好的提示词不只是堆砌形容词，而是把主体、动作、镜头、光线和情绪组织成一个可执行的视觉计划。</p>
-        <p><a href="./course.html?doc=prompt-course.md">开始第一节课 →</a></p>
-      </div>
-    </main>
-  </section>
-  <main class="layout">
-    <aside>
-      <h2>本页导航</h2>
-      <div id="toc"></div>
-    </aside>
-    <section>
-      <div class="intro" id="guide">
-        <div class="intro-item"><b>01 / 景别</b><span>决定观众看见多少，以及注意什么。</span></div>
-        <div class="intro-item"><b>02 / 运动</b><span>让镜头承担节奏、方向和情绪。</span></div>
-        <div class="intro-item"><b>03 / 细节</b><span>用灯光、色彩和环境完成叙事。</span></div>
-      </div>
-      <article id="content"><p class="loading">正在载入中文教程……</p></article>
-      <div id="prompt-list"></div>
-    </section>
+    <div class="book-shelf-note"><h2>配套资料</h2><p><a href="./seedance-workflow.html">流程总览</a>　<a href="./image-prompts.html">图片镜头提示词图库</a>　<a href="./Seedance-prompts.md">视频提示词源文档</a></p></div>
   </main>
-  <footer><main>教程覆盖 Seedance 2.0 系列、Seedance 2.5 与 MiniMax H3；图片和视频提示词均已中文化。内容采用知识共享署名-相同方式共享 4.0 国际许可协议。</main></footer>
-  <script>
-    fetch('./seedance-workflow.md')
-      .then(function (response) { if (!response.ok) throw new Error('文档加载失败'); return response.text(); })
-      .then(function (markdown) {
-        marked.setOptions({ headerIds: true, mangle: false });
-        document.getElementById('content').innerHTML = marked.parse(markdown);
-        var toc = document.getElementById('toc');
-        document.querySelectorAll('#content h2, #content h3').forEach(function (heading) {
-          var link = document.createElement('a');
-          link.href = '#' + heading.id;
-          link.textContent = heading.textContent;
-          toc.appendChild(link);
-        });
-      })
-      .catch(function () {
-        document.getElementById('content').innerHTML = '<p>教程加载失败，请打开 <a href="./seedance-workflow.html">流程总览页面</a>。</p>';
-      });
-  </script>
+  <footer><main>Seedance 2.0 系列、Seedance 2.5 与 MiniMax H3 的中文学习资料。内容采用知识共享署名-相同方式共享 4.0 国际许可协议。</main></footer>
 </body>
 </html>

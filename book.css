@@ -1,0 +1,151 @@
+:root {
+  --book-ink: #202a2a;
+  --book-muted: #71807d;
+  --book-paper: #f4f1e9;
+  --book-page: #fffdf8;
+  --book-line: #dedbd1;
+  --book-green: #236b5c;
+  --book-green-soft: #e4eee9;
+  --book-rust: #b75d38;
+  --book-shadow: 0 18px 50px rgba(38, 50, 46, .08);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--book-paper) !important;
+  color: var(--book-ink) !important;
+  font-family: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif !important;
+  line-height: 1.95 !important;
+}
+
+.book-topbar,
+.site-header,
+.topbar {
+  background: rgba(255, 253, 248, .94) !important;
+  border-bottom: 1px solid var(--book-line) !important;
+  backdrop-filter: blur(12px);
+}
+.book-topbar-inner,
+.site-header-inner,
+.topbar-inner {
+  width: min(1180px, calc(100% - 48px)) !important;
+  min-height: 72px !important;
+  margin: 0 auto !important;
+}
+.book-brand,
+.site-brand,
+.brand { color: var(--book-ink) !important; font-weight: 700 !important; letter-spacing: .04em !important; }
+.book-nav,
+nav { gap: 20px !important; }
+.book-nav a,
+.site-back,
+.top-link,
+nav a { color: var(--book-muted) !important; text-decoration: none !important; }
+.book-nav a:hover,
+.site-back:hover,
+.top-link:hover,
+nav a:hover { color: var(--book-green) !important; }
+
+.book-hero,
+.course-head,
+.hero {
+  background: var(--book-page) !important;
+  border-bottom: 1px solid var(--book-line) !important;
+}
+.book-hero-inner,
+.course-head > main,
+.hero-grid { width: min(1080px, calc(100% - 48px)) !important; margin: 0 auto !important; }
+.book-kicker,
+.eyebrow { color: var(--book-rust) !important; letter-spacing: .16em !important; }
+.book-title,
+.course-head h1,
+.hero h1 { color: var(--book-ink) !important; font-family: "Noto Serif SC", "Songti SC", serif !important; font-weight: 700 !important; letter-spacing: .02em !important; line-height: 1.35 !important; }
+.book-lead,
+.course-head .lead,
+.hero-copy { color: var(--book-muted) !important; line-height: 2 !important; }
+
+.book-layout,
+.layout {
+  width: min(1080px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+  grid-template-columns: 190px minmax(0, 760px) !important;
+  gap: 64px !important;
+  padding: 52px 0 88px !important;
+}
+.book-toc,
+aside { position: sticky !important; top: 90px !important; align-self: start !important; }
+.book-toc h2,
+aside h2 { color: var(--book-ink) !important; font-size: 14px !important; letter-spacing: .08em !important; }
+.book-toc a,
+aside a { display: block !important; padding: 4px 0 !important; color: var(--book-muted) !important; font-size: 13px !important; line-height: 1.7 !important; text-decoration: none !important; }
+.book-toc a:hover,
+aside a:hover { color: var(--book-green) !important; }
+
+.book-article,
+article {
+  min-width: 0 !important;
+  background: var(--book-page) !important;
+  padding: 48px 62px 76px !important;
+  box-shadow: var(--book-shadow) !important;
+  border: 1px solid rgba(222, 219, 209, .7) !important;
+}
+.book-article h2,
+article h2 { margin: 52px 0 18px !important; padding-top: 24px !important; border-top: 1px solid var(--book-line) !important; color: var(--book-ink) !important; font-family: "Noto Serif SC", "Songti SC", serif !important; font-size: 27px !important; line-height: 1.55 !important; }
+.book-article h3,
+article h3 { margin: 34px 0 12px !important; color: var(--book-green) !important; font-size: 21px !important; line-height: 1.6 !important; }
+.book-article h4,
+article h4 { color: var(--book-ink) !important; font-size: 17px !important; }
+.book-article p,
+article p { margin: 1em 0 !important; }
+.book-article blockquote,
+article blockquote { background: var(--book-green-soft) !important; border-left: 3px solid var(--book-green) !important; color: #4f625d !important; }
+.book-article pre,
+article pre { background: #243331 !important; border-left: 4px solid var(--book-rust) !important; border-radius: 3px !important; font-family: "Noto Sans Mono", "SFMono-Regular", monospace !important; line-height: 1.8 !important; }
+.book-article code,
+article code { background: #f0eee6 !important; color: #76503b; }
+.book-article pre code,
+article pre code { background: transparent !important; color: #f0f5f1 !important; }
+.book-article table,
+article table { border-color: var(--book-line) !important; }
+.book-article th,
+.book-article td,
+article th,
+article td { border-color: var(--book-line) !important; }
+.book-article th,
+article th { background: var(--book-green-soft) !important; }
+
+.book-shelf { width: min(1080px, calc(100% - 48px)); margin: 0 auto; padding: 70px 0 100px; }
+.book-shelf-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.book-card { display: flex; flex-direction: column; min-height: 310px; padding: 30px; background: var(--book-page); border: 1px solid var(--book-line); box-shadow: var(--book-shadow); text-decoration: none; color: var(--book-ink); }
+.book-card:hover { border-color: var(--book-green); transform: translateY(-2px); transition: .2s ease; }
+.book-card .number { color: var(--book-rust); font-size: 13px; letter-spacing: .12em; }
+.book-card h2 { margin: 26px 0 10px; font-family: "Noto Serif SC", "Songti SC", serif; font-size: 28px; line-height: 1.45; }
+.book-card p { margin: 0; color: var(--book-muted); line-height: 1.9; }
+.book-card .read { margin-top: auto; padding-top: 26px; color: var(--book-green); font-size: 14px; }
+.book-shelf-note { margin-top: 42px; padding-top: 22px; border-top: 1px solid var(--book-line); color: var(--book-muted); }
+.book-shelf-note h2 { margin: 0 0 8px; color: var(--book-ink); font-size: 20px; }
+.book-shelf-note p { margin: 0; }
+
+/* The image gallery is a working reference library inside the same book. */
+.container { max-width:1080px !important; margin:0 auto !important; padding:54px 24px 80px !important; }
+.container h1 { max-width:780px !important; margin:0 0 12px !important; padding:0 !important; border:0 !important; text-align:left !important; color:var(--book-ink) !important; font-family:"Noto Serif SC","Songti SC",serif !important; font-size:clamp(34px,5vw,58px) !important; line-height:1.35 !important; }
+.container .intro { max-width:760px !important; margin:0 0 36px !important; color:var(--book-muted) !important; font-size:18px !important; }
+.container .category { margin:0 0 48px !important; padding:0 0 34px !important; background:transparent !important; border-bottom:1px solid var(--book-line) !important; box-shadow:none !important; }
+.container .category-title { margin:0 0 22px !important; padding:0 0 10px !important; color:var(--book-ink) !important; border-bottom:2px solid var(--book-green) !important; font-family:"Noto Serif SC","Songti SC",serif !important; font-size:24px !important; line-height:1.5 !important; }
+.container .prompt-grid { grid-template-columns:repeat(auto-fit,minmax(270px,1fr)) !important; gap:16px !important; }
+.container .prompt-card { background:var(--book-page) !important; border:1px solid var(--book-line) !important; border-left:4px solid var(--book-green) !important; border-radius:4px !important; box-shadow:none !important; }
+.container .prompt-card:hover { border-color:var(--book-green) !important; }
+.container .prompt-tag { color:var(--book-rust) !important; font-weight:700 !important; }
+.container .prompt-description { color:var(--book-muted) !important; }
+.container .prompt-image { border-radius:3px !important; }
+
+footer { background: transparent !important; border-top: 1px solid var(--book-line) !important; color: var(--book-muted) !important; }
+
+@media (max-width: 800px) {
+  .book-topbar-inner, .site-header-inner, .topbar-inner, .book-hero-inner, .course-head > main, .hero-grid, .book-layout, .layout, .book-shelf { width: min(100% - 28px, 1080px) !important; }
+  .book-layout, .layout { display: block !important; }
+  .book-toc, aside { display: none !important; }
+  .book-article, article { padding: 30px 22px 52px !important; box-shadow: none !important; }
+  .book-shelf-grid { grid-template-columns: 1fr; }
+  .book-card { min-height: 260px; padding: 24px; }
+}
