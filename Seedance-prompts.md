@@ -2,7 +2,7 @@
 
 ## 电影级 Seedance 视频提示词简介
 
-欢迎阅读**电影级Seedance视频提示词**教程！本指南专为创作者、电影制作人和内容爱好者打造，帮助您充分发挥[Seedance](./seedance-workflow.md)这种先进的AI视频生成工具的能力。
+欢迎阅读**电影级Seedance视频提示词**教程！本指南专为创作者、电影制作人和内容爱好者打造，帮助您充分发挥[Seedance](./seedance-workflow.html)这种先进的AI视频生成工具的能力。
 
 Seedance 可以将文字描述转换为动态且富有视觉表现力的视频内容，连接想象与现实。即使没有深厚的技术背景，也能创作出专业级的电影体验。
 
@@ -54,7 +54,7 @@ Seedance 利用自然语言处理和机器学习算法理解提示词。通过�
 
 ## 1. Seedance 简介
 
-[Seedance](./seedance-workflow.md) 是字节跳动的视频生成模型系列，可以将文字和参考素材转换为动态视频内容。借助自然语言处理能力和电影技法，创作者可以更轻松地制作专业质量的视频。本教程将帮助你编写有效的提示词，充分发挥不同 Seedance 模型的潜力。
+[Seedance](./seedance-workflow.html) 是字节跳动的视频生成模型系列，可以将文字和参考素材转换为动态视频内容。借助自然语言处理能力和电影技法，创作者可以更轻松地制作专业质量的视频。本教程将帮助你编写有效的提示词，充分发挥不同 Seedance 模型的潜力。
 
 ---
 
@@ -63,7 +63,7 @@ Seedance 利用自然语言处理和机器学习算法理解提示词。通过�
 开始之前，请准备好以下内容：
 
 - **电影术语基础**：熟悉镜头景别和运动方式有助于理解本教程。
-- **Seedance使用权限**：确保拥有有效的[Seedance账号](./seedance-workflow.md)以及生成视频所需的权限。
+- **Seedance使用权限**：确保拥有有效的[Seedance账号](./seedance-workflow.html)以及生成视频所需的权限。
 - **文本编辑器**：用于编写和完善提示词，例如VS Code、Sublime Text或普通文本编辑器。
 
 ---
@@ -73,8 +73,8 @@ Seedance 利用自然语言处理和机器学习算法理解提示词。通过�
 按照以下步骤开始使用Seedance制作电影级视频：
 
 1. **登录Seedance账号**：
-    - 访问 [Seedance 网站](./seedance-workflow.md)，使用账号信息登录。
-    - 如果还没有账号，请[在此注册](./seedance-workflow.md)。
+    - 访问 [Seedance 网站](./seedance-workflow.html)，使用账号信息登录。
+    - 如果还没有账号，请[在此注册](./seedance-workflow.html)。
 
 2. **进入视频生成区域**：
     - 在控制面板中选择“创建新视频”。
@@ -344,7 +344,7 @@ Seedance 利用自然语言处理和机器学习算法理解提示词。通过�
 
 **问：我可以将Seedance用于商业项目吗？**
 
-答：可以。在拥有适当许可的情况下，您可以将Seedance生成的视频用于商业用途。详情请参阅[Seedance许可指南](./seedance-workflow.md)。
+答：可以。在拥有适当许可的情况下，您可以将Seedance生成的视频用于商业用途。详情请参阅[Seedance许可指南](./seedance-workflow.html)。
 
 **问：生成视频需要多长时间？**
 
@@ -370,7 +370,7 @@ Seedance 利用自然语言处理和机器学习算法理解提示词。通过�
 
 ## 16. 更多资源
 
-- [Seedance 文档](./seedance-workflow.md)
+- [Seedance 文档](./seedance-workflow.html)
 - [电影技术指南](https://cinematic.com/techniques)
 - [高级提示工程](https://promptengineering.com/advanced)
 
@@ -378,7 +378,7 @@ Seedance 利用自然语言处理和机器学习算法理解提示词。通过�
 
 ## 17. 许可证与贡献指南
 
-本教程采用[知识共享签名-方式相同共享4.0国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/)授权。欢迎提交贡献和改进，请遵循[贡献指南](./seedance-workflow.md)提交。
+本教程采用[知识共享签名-方式相同共享4.0国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/)授权。欢迎提交贡献和改进，请遵循[贡献指南](./seedance-workflow.html)提交。
 
 ---
 

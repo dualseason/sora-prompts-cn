@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Seedance 系列与 MiniMax H3 自媒体电影工作流总览。">
+  <title>Seedance 与 MiniMax H3 工作流总览</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root { --ink:#17202a; --muted:#65717d; --paper:#f7f8f5; --line:#dfe4df; --accent:#176b5b; --soft:#e0f0eb; --warm:#d56b3d; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.9 "Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif; }
+    a { color:var(--accent); }
+    header { background:#fff; border-bottom:1px solid var(--line); }
+    .bar, main { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    .bar { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { color:var(--ink); font-weight:750; text-decoration:none; white-space:nowrap; }
+    nav { display:flex; gap:18px; flex-wrap:wrap; justify-content:flex-end; }
+    nav a { color:var(--muted); font-size:14px; text-decoration:none; white-space:nowrap; }
+    .hero { padding:58px 0 42px; background:#fff; border-bottom:1px solid var(--line); }
+    .eyebrow { margin:0 0 12px; color:var(--warm); font-size:13px; font-weight:750; }
+    h1 { max-width:820px; margin:0; font-size:clamp(34px,5vw,58px); line-height:1.25; }
+    .lead { max-width:780px; margin:18px 0 0; color:var(--muted); font-size:18px; }
+    article { padding:38px 0 72px; }
+    article h1 { display:none; }
+    article h2 { margin:52px 0 15px; padding-top:16px; border-top:1px solid var(--line); font-size:29px; line-height:1.45; }
+    article h3 { margin-top:32px; font-size:22px; }
+    article p, article ul, article ol, article table { max-width:880px; }
+    article blockquote { margin:24px 0; padding:12px 18px; color:#4f625d; background:var(--soft); border-left:3px solid var(--accent); }
+    article pre { overflow:auto; padding:18px 20px; color:#edf4ef; background:#182b2a; border-left:4px solid var(--warm); border-radius:4px; line-height:1.8; }
+    article code { padding:2px 5px; background:#eef1ee; border-radius:3px; }
+    article pre code { padding:0; color:inherit; background:none; }
+    table { width:100%; border-collapse:collapse; margin:20px 0; font-size:14px; }
+    th, td { padding:10px 12px; border:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:var(--soft); }
+    footer { padding:28px 0 48px; color:var(--muted); border-top:1px solid var(--line); font-size:14px; }
+    @media (max-width:760px) { .bar, main { width:min(100% - 28px, 1120px); } .bar { align-items:flex-start; padding:15px 0; } nav { gap:6px 14px; } .hero { padding:42px 0 34px; } article h2 { font-size:25px; } th, td { padding:8px; } }
+  </style>
+</head>
+<body>
+  <header><div class="bar">
+    <a class="brand" href="./">自媒体电影工作流</a>
+    <nav>
+      <a href="./course.html?doc=prompt-course.md">提示词课</a>
+      <a href="./course.html?doc=ai-media-course.md">AI 自媒体课</a>
+      <a href="./image-prompts.html">图片图库</a>
+    </nav>
+  </div></header>
+  <section class="hero"><main>
+    <p class="eyebrow">总览</p>
+    <h1>从提示词到一条能发布的 AI 电影</h1>
+    <p class="lead">先看这份总览理解模型和流程，再进入两节长课：第一节学提示词，第二节学自媒体生产。</p>
+  </main></section>
+  <main><article id="content"><p>正在载入总览……</p></article></main>
+  <footer><main>Seedance 2.0 系列、Seedance 2.5 与 MiniMax H3 的中文工作流资料。</main></footer>
+  <script>
+    fetch('./seedance-workflow.md').then(function (response) {
+      if (!response.ok) throw new Error('总览加载失败');
+      return response.text();
+    }).then(function (markdown) {
+      marked.setOptions({ headerIds: true, mangle: false });
+      document.getElementById('content').innerHTML = marked.parse(markdown);
+    }).catch(function () {
+      document.getElementById('content').innerHTML = '<p>总览加载失败，请打开 <a href="./seedance-workflow.md">源文档</a>。</p>';
+    });
+  </script>
+</body>
+</html>
