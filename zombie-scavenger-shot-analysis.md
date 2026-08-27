@@ -33,7 +33,7 @@
 
 ## 第一段：序幕与世界建立（00:00–00:17）
 
-<figure class="shot-analysis-frame"><img src="./images/shot-analysis/01-prologue.jpg" alt="序幕：海滨别墅与机器人"><figcaption>序幕代表帧，约 00:14。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
+<figure class="shot-analysis-frame"><a href="./images/shot-analysis/shots/shot-006.webp" target="_blank"><img src="./images/shot-analysis/shots/shot-006.webp" alt="序幕：海滨别墅与机器人"></a><figcaption>序幕代表帧，约 00:14。点击查看原始尺寸。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
 
 | # | 时间码 | 画面、景别与运镜 | 声画与叙事作用 |
 |---:|---:|---|---|
@@ -50,7 +50,7 @@
 
 ## 第二段：机器人舞蹈蒙太奇（00:17–00:35）
 
-<figure class="shot-analysis-frame"><img src="./images/shot-analysis/02-dance.jpg" alt="机器人舞蹈蒙太奇"><figcaption>舞蹈段代表帧，约 00:29。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
+<figure class="shot-analysis-frame"><a href="./images/shot-analysis/shots/shot-014.webp" target="_blank"><img src="./images/shot-analysis/shots/shot-014.webp" alt="机器人舞蹈蒙太奇"></a><figcaption>舞蹈段代表帧，约 00:29。点击查看原始尺寸。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
 
 | # | 时间码 | 画面、景别与运镜 | 声画与叙事作用 |
 |---:|---:|---|---|
@@ -73,7 +73,7 @@
 
 ## 第三段：在别墅遇见鸵鸟（00:35–01:02）
 
-<figure class="shot-analysis-frame"><img src="./images/shot-analysis/03-ostrich.jpg" alt="机器人在别墅遇见鸵鸟"><figcaption>鸵鸟段代表帧，约 00:47。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
+<figure class="shot-analysis-frame"><a href="./images/shot-analysis/shots/shot-024.webp" target="_blank"><img src="./images/shot-analysis/shots/shot-024.webp" alt="机器人在别墅遇见鸵鸟"></a><figcaption>鸵鸟段代表帧，约 00:47。点击查看原始尺寸。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
 
 | # | 时间码 | 画面、景别与运镜 | 声画与叙事作用 |
 |---:|---:|---|---|
@@ -97,7 +97,7 @@
 
 ## 第四段：搭档、公路与动作戏（01:02–01:40）
 
-<figure class="shot-analysis-frame"><img src="./images/shot-analysis/04-road-fight.jpg" alt="机器人和鸵鸟在公路上行动"><figcaption>公路与动作段代表帧，约 01:20。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
+<figure class="shot-analysis-frame"><a href="./images/shot-analysis/shots/shot-038.webp" target="_blank"><img src="./images/shot-analysis/shots/shot-038.webp" alt="机器人和鸵鸟在公路上行动"></a><figcaption>公路与动作段代表帧，约 01:20。点击查看原始尺寸。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
 
 | # | 时间码 | 画面、景别与运镜 | 声画与叙事作用 |
 |---:|---:|---|---|
@@ -127,7 +127,7 @@
 
 ## 第五段：1989 西海岸转场（01:40–02:01）
 
-<figure class="shot-analysis-frame"><img src="./images/shot-analysis/05-west-coast.jpg" alt="1989 年西海岸废墟街道"><figcaption>时间与地点转场代表帧，约 01:44。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
+<figure class="shot-analysis-frame"><a href="./images/shot-analysis/shots/shot-048.webp" target="_blank"><img src="./images/shot-analysis/shots/shot-048.webp" alt="1989 年西海岸废墟街道"></a><figcaption>时间与地点转场代表帧，约 01:44。点击查看原始尺寸。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
 
 | # | 时间码 | 画面、景别与运镜 | 声画与叙事作用 |
 |---:|---:|---|---|
@@ -140,7 +140,7 @@
 
 ## 第六段：看见红裙女子（02:01–02:31）
 
-<figure class="shot-analysis-frame"><img src="./images/shot-analysis/06-love.jpg" alt="机器人看见红裙女子"><figcaption>相遇与爱情段代表帧，约 02:16。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
+<figure class="shot-analysis-frame"><a href="./images/shot-analysis/shots/shot-057.webp" target="_blank"><img src="./images/shot-analysis/shots/shot-057.webp" alt="机器人看见红裙女子"></a><figcaption>相遇与爱情段代表帧，约 02:16。点击查看原始尺寸。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
 
 | # | 时间码 | 画面、景别与运镜 | 声画与叙事作用 |
 |---:|---:|---|---|
@@ -161,7 +161,7 @@
 
 ## 第七段：爱情蒙太奇（02:31–02:55）
 
-<figure class="shot-analysis-frame"><img src="./images/shot-analysis/07-montage.jpg" alt="机器人和女子的爱情蒙太奇"><figcaption>爱情蒙太奇代表帧，约 02:46。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
+<figure class="shot-analysis-frame"><a href="./images/shot-analysis/shots/shot-066.webp" target="_blank"><img src="./images/shot-analysis/shots/shot-066.webp" alt="机器人和女子的爱情蒙太奇"></a><figcaption>爱情蒙太奇代表帧，约 02:46。点击查看原始尺寸。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
 
 | # | 时间码 | 画面、景别与运镜 | 声画与叙事作用 |
 |---:|---:|---|---|
@@ -175,7 +175,7 @@
 
 ## 第八段：日落被打断与离开地球（02:55–03:14）
 
-<figure class="shot-analysis-frame"><img src="./images/shot-analysis/08-escape.jpg" alt="机器人和女子准备离开地球"><figcaption>日落与逃亡段代表帧，约 03:04。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
+<figure class="shot-analysis-frame"><a href="./images/shot-analysis/shots/shot-073.webp" target="_blank"><img src="./images/shot-analysis/shots/shot-073.webp" alt="机器人和女子准备离开地球"></a><figcaption>日落与逃亡段代表帧，约 03:04。点击查看原始尺寸。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
 
 | # | 时间码 | 画面、景别与运镜 | 声画与叙事作用 |
 |---:|---:|---|---|
@@ -187,7 +187,7 @@
 
 ## 第九段：太空尾声与片尾（03:14–03:34）
 
-<figure class="shot-analysis-frame"><img src="./images/shot-analysis/09-space.jpg" alt="飞船在地球轨道上航行"><figcaption>太空尾声代表帧，约 03:20。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
+<figure class="shot-analysis-frame"><a href="./images/shot-analysis/shots/shot-077.webp" target="_blank"><img src="./images/shot-analysis/shots/shot-077.webp" alt="飞船在地球轨道上航行"></a><figcaption>太空尾声代表帧，约 03:20。点击查看原始尺寸。画面来源：Mx-Shell 官方重制版，仅用于本页拉片教学。</figcaption></figure>
 
 | # | 时间码 | 画面、景别与运镜 | 声画与叙事作用 |
 |---:|---:|---|---|
