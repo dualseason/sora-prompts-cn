@@ -62,6 +62,12 @@
     <h1 id="title">课程加载中</h1>
     <p class="lead" id="lead">正在载入课程内容……</p>
   </main></section>
+  <section class="official-video" id="official-video" hidden>
+    <div class="official-video-inner">
+      <div class="official-video-frame"><iframe id="official-video-player" title="Mx-Shell《丧尸清道夫》官方原片" allowfullscreen scrolling="no" frameborder="0"></iframe></div>
+      <p>原片由 Mx-Shell 发布，播放器由 B 站提供。<a href="https://www.bilibili.com/video/BV1FFRQB2Eqw/" target="_blank" rel="noopener noreferrer">在 B 站打开官方原片</a></p>
+    </div>
+  </section>
   <main class="layout">
     <aside><h2>章节导航</h2><div id="toc"></div></aside>
     <article id="content"><p>正在载入课程内容……</p></article>
@@ -79,6 +85,10 @@
     document.title = meta[0] + '｜自媒体电影工作流';
     document.getElementById('title').textContent = meta[0];
     document.getElementById('lead').textContent = meta[1];
+    if (doc === 'zombie-scavenger-shot-analysis.md') {
+      document.getElementById('official-video').hidden = false;
+      document.getElementById('official-video-player').src = 'https://player.bilibili.com/player.html?bvid=BV1FFRQB2Eqw&page=1&high_quality=1&danmaku=0';
+    }
     fetch('./' + doc).then(function (response) {
       if (!response.ok) throw new Error('课程加载失败');
       return response.text();
