@@ -50,7 +50,7 @@
       th, td { padding:8px; }
     }
   </style>
-  <link rel="stylesheet" href="./book.css?v=13">
+  <link rel="stylesheet" href="./book.css?v=14">
 </head>
 <body>
   <header class="plain-header"><div class="plain-header-inner">
@@ -109,6 +109,47 @@
         toc.appendChild(link);
       });
       if (doc === 'zombie-scavenger-shot-analysis.md') {
+        var segmentStyles = [
+          { end: 18, text: '原子朋克末日海滨，1980年代复古未来主义，豪华流线型滨海别墅与废墟并存，强烈日光，青蓝海水，暖金高光，低饱和电影调色' },
+          { end: 31, text: '末日滨海别墅室内，曲线现代主义建筑，落地窗、吧台和海景，写实材质，明暗对比，荒诞黑色喜剧气质' },
+          { end: 46, text: '1980年代美国西海岸末日公路，废弃汽车、感染体和残骸，正午硬光，尘土与爆炸，写实动作电影质感' },
+          { end: 52, text: '1989年美国西海岸废墟小镇，汽车旅馆、复古轿车和棕榈树，正午阳光，宽银幕公路电影质感' },
+          { end: 62, text: '末日小镇爱情段落，服装店橱窗、红色连衣裙与复古餐厅，红色视觉焦点，柔和逆光，荒诞浪漫电影质感' },
+          { end: 69, text: '末日爱情记忆蒙太奇，公园、游乐场、敞篷车和理发店，复古胶片感，温暖生活化光线，轻快浪漫' },
+          { end: 74, text: '末日城市日落与逃亡，橙紫色天空、废墟发射场和小型飞船，史诗逆光，浪漫与危险并存' },
+          { end: 80, text: '近地轨道复古飞船舱内，舷窗外蓝色地球，低照度暖色舱灯，安静克制的科幻尾声' }
+        ];
+        function styleFor(number) {
+          return segmentStyles.find(function (item) { return number <= item.end; }).text;
+        }
+        function durationFor(value) {
+          var parts = value.split('–');
+          function toSeconds(time) {
+            var match = time.match(/(\d{2}):(\d{2}(?:\.\d+)?)/);
+            return match ? Number(match[1]) * 60 + Number(match[2]) : 0;
+          }
+          return Math.max(1, Math.round((toSeconds(parts[1] || '') - toSeconds(parts[0] || '')) * 10) / 10);
+        }
+        function addPromptBlock(parent, title, text) {
+          var heading = document.createElement('strong');
+          heading.textContent = title;
+          var prompt = document.createElement('p');
+          prompt.className = 'shot-prompt-text';
+          prompt.textContent = text;
+          var button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'shot-copy-button';
+          button.textContent = '复制';
+          button.addEventListener('click', function () {
+            navigator.clipboard.writeText(text).then(function () {
+              button.textContent = '已复制';
+              setTimeout(function () { button.textContent = '复制'; }, 1200);
+            });
+          });
+          parent.appendChild(heading);
+          parent.appendChild(button);
+          parent.appendChild(prompt);
+        }
         document.querySelectorAll('#content tbody tr').forEach(function (row) {
           var cells = row.querySelectorAll('td');
           if (cells.length < 4 || !/^\d+$/.test(cells[0].textContent.trim())) return;
@@ -135,6 +176,22 @@
           hint.textContent = '查看官方原片对应时间 →';
           imageLink.appendChild(hint);
           cells[2].prepend(imageLink);
+          var visual = cells[2].textContent.replace('查看官方原片对应时间 →', '').trim();
+          var narrative = cells[3].textContent.trim();
+          var style = styleFor(number);
+          var imagePrompt = style + '。' + visual + '。主体和环境关系清楚，保持宽银幕 2.33:1 构图，写实电影摄影，真实金属、皮肤、羽毛、混凝土和织物材质，景深自然，光线方向明确，不添加字幕、水印、品牌或额外人物。';
+          var videoPrompt = '以上述生成图作为首帧，生成约 ' + durationFor(cells[1].textContent.trim()) + ' 秒视频。保持首帧中的角色身份、服装、机器人像素脸、鸵鸟外形、场景布局、光线方向和宽银幕构图不变。' + visual + '。镜头目的：' + narrative + '。动作遵循真实惯性，主体运动方向连续，一个镜头只保留当前描述中的主要运镜；结尾停在清楚、可接下一镜的姿态，不新增角色、文字、镜头跳切或无关动作。';
+          var details = document.createElement('details');
+          details.className = 'shot-prompts';
+          var summary = document.createElement('summary');
+          summary.textContent = '查看本镜头生图与图生视频提示词';
+          details.appendChild(summary);
+          var body = document.createElement('div');
+          body.className = 'shot-prompts-body';
+          addPromptBlock(body, '生图提示词', imagePrompt);
+          addPromptBlock(body, '图生视频提示词', videoPrompt);
+          details.appendChild(body);
+          cells[2].appendChild(details);
         });
       }
     }).catch(function () {

@@ -106,10 +106,17 @@ nav a:hover { color: var(--book-green) !important; }
 .shot-analysis-table td:first-child { width:44px; }
 .shot-analysis-table th:nth-child(2),
 .shot-analysis-table td:nth-child(2) { width:112px; }
-.shot-row-image { display:block; width:100%; max-width:360px; margin:0 0 10px; aspect-ratio:2.33/1; object-fit:cover; border:1px solid var(--book-line); background:#111; }
-.shot-row-link { display:block; max-width:360px; margin-bottom:10px; color:var(--book-muted) !important; text-decoration:none; }
+.shot-row-image { display:block; width:100%; max-width:640px; margin:0 0 10px; aspect-ratio:2.33/1; object-fit:cover; border:1px solid var(--book-line); background:#111; }
+.shot-row-link { display:block; max-width:640px; margin-bottom:10px; color:var(--book-muted) !important; text-decoration:none; }
 .shot-row-link:hover .shot-row-image { border-color:var(--book-green); }
 .shot-row-hint { display:block; margin-top:-3px; font-size:11px; color:var(--book-muted); }
+.shot-prompts { margin-top:14px; border-top:1px dashed var(--book-line); }
+.shot-prompts summary { padding:10px 0; color:var(--book-green); font-size:13px; cursor:pointer; }
+.shot-prompts-body { padding:4px 0 8px; }
+.shot-prompts-body strong { color:var(--book-ink); font-size:13px; }
+.shot-copy-button { float:right; border:1px solid var(--book-line); border-radius:999px; background:transparent; color:var(--book-muted); padding:3px 10px; font:inherit; font-size:11px; cursor:pointer; }
+.shot-copy-button:hover { border-color:var(--book-green); color:var(--book-green); }
+.shot-prompt-text { margin:6px 0 16px !important; color:var(--book-muted); font-size:13px; line-height:1.8; }
 
 .book-hero,
 .course-head,
