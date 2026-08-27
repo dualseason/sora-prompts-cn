@@ -99,6 +99,7 @@
 ## 配套资料
 
 - [80 镜完整文字拉片](./course.html?doc=zombie-scavenger-shot-analysis.md)
+- [看懂镜头：镜头语言参考手册](./lens-guide.html)
 - [图片镜头提示词图库](./image-prompts.html)
 - [电影级视频提示词词典](./Seedance-prompts.md)
 - [Mx-Shell 创作思路分享](https://www.bilibili.com/video/BV1xuVC6AEbg/)
