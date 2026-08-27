@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="中文 AI 电影与自媒体工作流课程。">
-  <title>课程加载中｜自媒体电影工作流</title>
+  <meta name="description" content="围绕《丧尸清道夫》完整拉片展开的提示词课与AI自媒体电影课。">
+  <title>课程加载中｜丧尸清道夫 AI 电影课</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     :root { --ink:#17202a; --muted:#65717d; --paper:#f7f8f5; --line:#dfe4df; --accent:#176b5b; --soft:#ece9e1; --warm:#d56b3d; }
@@ -54,7 +54,7 @@
 </head>
 <body>
   <header class="plain-header"><div class="plain-header-inner">
-    <a class="plain-brand" href="./">末日清道夫 AI 漫剧课</a>
+    <a class="plain-brand" href="./">丧尸清道夫 AI 电影课</a>
     <nav><a href="./seedance-workflow.html">流程总览</a><a href="./course.html?doc=zombie-scavenger-shot-analysis.md">原片拉片</a><a href="./image-prompts.html">图片图库</a><button class="theme-toggle" data-theme-toggle type="button">切换暗色</button></nav>
   </div></header>
   <section class="course-head"><main>
@@ -72,17 +72,17 @@
     <aside><h2>章节导航</h2><div id="toc"></div></aside>
     <article id="content"><p>正在载入课程内容……</p></article>
   </main>
-  <footer><main>Seedance 2.0 系列、Seedance 2.5 与 MiniMax H3 的学习资料。平台参数和模型能力会更新，请以实际界面与官方文档为准。</main></footer>
+  <footer><main>围绕《丧尸清道夫》80镜拉片展开的中文AI电影学习资料。模型能力会更新，请以实际界面与官方文档为准。</main></footer>
   <script>
     const params = new URLSearchParams(location.search);
     const doc = params.get('doc') || 'prompt-course.md';
     const names = {
-      'prompt-course.md': ['第一节课：为《末日清道夫》写提示词', '制作 Q-17、零号站和工具资产，写出可执行的分镜提示词。'],
-      'ai-media-course.md': ['第二节课：完成《末日清道夫》AI 漫剧', '接着第一节课的资产，完成八个镜头、剪辑、发布和复盘。'],
+      'prompt-course.md': ['第一节课：《丧尸清道夫》提示词拆解课', '从80镜拉片反推角色、场景、首帧、动作和图生视频提示词。'],
+      'ai-media-course.md': ['第二节课：从《丧尸清道夫》学习 AI 自媒体电影', '从成片反推选题、故事、生产、剪辑、发布和系列化。'],
       'zombie-scavenger-shot-analysis.md': ['《丧尸清道夫》完整文字拉片', '按时间码拆解官方重制版的 80 个教学镜头单元。']
     };
     const meta = names[doc] || names['prompt-course.md'];
-    document.title = meta[0] + '｜自媒体电影工作流';
+    document.title = meta[0] + '｜丧尸清道夫 AI 电影课';
     document.getElementById('title').textContent = meta[0];
     document.getElementById('lead').textContent = meta[1];
     if (doc === 'zombie-scavenger-shot-analysis.md') {
