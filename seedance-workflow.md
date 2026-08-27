@@ -102,6 +102,7 @@
 
 ## 配套资料
 
+- [《丧尸清道夫》完整文字拉片](./course.html?doc=zombie-scavenger-shot-analysis.md)
 - [图片镜头提示词图库](./image-prompts.html)
 - [电影级视频提示词词典](./Seedance-prompts.md)
 - [Seedance 与 MiniMax H3 模型说明](./course.html?doc=prompt-course.md)

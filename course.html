@@ -55,7 +55,7 @@
 <body>
   <header class="plain-header"><div class="plain-header-inner">
     <a class="plain-brand" href="./">末日清道夫 AI 漫剧课</a>
-    <nav><a href="./seedance-workflow.html">流程总览</a><a href="./image-prompts.html">图片图库</a><button class="theme-toggle" data-theme-toggle type="button">切换暗色</button></nav>
+    <nav><a href="./seedance-workflow.html">流程总览</a><a href="./course.html?doc=zombie-scavenger-shot-analysis.md">原片拉片</a><a href="./image-prompts.html">图片图库</a><button class="theme-toggle" data-theme-toggle type="button">切换暗色</button></nav>
   </div></header>
   <section class="course-head"><main>
     <p class="eyebrow">中文长课</p>
@@ -72,7 +72,8 @@
     const doc = params.get('doc') || 'prompt-course.md';
     const names = {
       'prompt-course.md': ['第一节课：为《末日清道夫》写提示词', '制作 Q-17、零号站和工具资产，写出可执行的分镜提示词。'],
-      'ai-media-course.md': ['第二节课：完成《末日清道夫》AI 漫剧', '接着第一节课的资产，完成八个镜头、剪辑、发布和复盘。']
+      'ai-media-course.md': ['第二节课：完成《末日清道夫》AI 漫剧', '接着第一节课的资产，完成八个镜头、剪辑、发布和复盘。'],
+      'zombie-scavenger-shot-analysis.md': ['《丧尸清道夫》完整文字拉片', '按时间码拆解官方重制版的 80 个教学镜头单元。']
     };
     const meta = names[doc] || names['prompt-course.md'];
     document.title = meta[0] + '｜自媒体电影工作流';
