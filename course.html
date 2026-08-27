@@ -50,7 +50,7 @@
       th, td { padding:8px; }
     }
   </style>
-  <link rel="stylesheet" href="./book.css?v=12">
+  <link rel="stylesheet" href="./book.css?v=13">
 </head>
 <body>
   <header class="plain-header"><div class="plain-header-inner">
@@ -121,7 +121,20 @@
           image.decoding = 'async';
           image.src = './images/shot-analysis/shots/shot-' + String(number).padStart(3, '0') + '.webp';
           image.alt = '《丧尸清道夫》镜头 ' + number + ' 代表帧';
-          cells[2].prepend(image);
+          var timeMatch = cells[1].textContent.trim().match(/^(\d{2}):(\d{2})/);
+          var seconds = timeMatch ? Number(timeMatch[1]) * 60 + Number(timeMatch[2]) : 0;
+          var imageLink = document.createElement('a');
+          imageLink.className = 'shot-row-link';
+          imageLink.href = 'https://www.bilibili.com/video/BV1FFRQB2Eqw/?t=' + seconds;
+          imageLink.target = '_blank';
+          imageLink.rel = 'noopener noreferrer';
+          imageLink.title = '在 B 站官方原片中查看镜头 ' + number;
+          imageLink.appendChild(image);
+          var hint = document.createElement('span');
+          hint.className = 'shot-row-hint';
+          hint.textContent = '查看官方原片对应时间 →';
+          imageLink.appendChild(hint);
+          cells[2].prepend(imageLink);
         });
       }
     }).catch(function () {

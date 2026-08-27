@@ -107,6 +107,9 @@ nav a:hover { color: var(--book-green) !important; }
 .shot-analysis-table th:nth-child(2),
 .shot-analysis-table td:nth-child(2) { width:112px; }
 .shot-row-image { display:block; width:100%; max-width:360px; margin:0 0 10px; aspect-ratio:2.33/1; object-fit:cover; border:1px solid var(--book-line); background:#111; }
+.shot-row-link { display:block; max-width:360px; margin-bottom:10px; color:var(--book-muted) !important; text-decoration:none; }
+.shot-row-link:hover .shot-row-image { border-color:var(--book-green); }
+.shot-row-hint { display:block; margin-top:-3px; font-size:11px; color:var(--book-muted); }
 
 .book-hero,
 .course-head,
@@ -279,4 +282,23 @@ footer { background: transparent !important; border-top: 1px solid var(--book-li
   .shot-analysis-table td:first-child { width:32px; }
   .shot-analysis-table th:nth-child(2),
   .shot-analysis-table td:nth-child(2) { width:74px; }
+}
+
+@media (max-width: 640px) {
+  .shot-analysis-table,
+  .shot-analysis-table tbody,
+  .shot-analysis-table tr,
+  .shot-analysis-table td { display:block; width:100% !important; }
+  .shot-analysis-table thead { display:none; }
+  .shot-analysis-table { border:0 !important; }
+  .shot-analysis-table tr { margin:0 0 24px; padding:16px 0 18px; border-top:1px solid var(--book-line); }
+  .shot-analysis-table td { padding:5px 0 !important; border:0 !important; }
+  .shot-analysis-table td:first-child { color:var(--book-rust); font-family:ui-monospace,monospace; font-weight:700; }
+  .shot-analysis-table td:first-child::before { content:'镜头 '; }
+  .shot-analysis-table td:nth-child(2) { color:var(--book-muted); font-size:13px; }
+  .shot-analysis-table td:nth-child(2)::before { content:'时间：'; }
+  .shot-analysis-table td:nth-child(3)::before { content:'画面与摄影'; display:block; margin-bottom:7px; color:var(--book-ink); font-weight:700; }
+  .shot-analysis-table td:nth-child(4)::before { content:'声画与叙事作用'; display:block; margin:8px 0 3px; color:var(--book-ink); font-weight:700; }
+  .shot-row-link,
+  .shot-row-image { max-width:none; }
 }
