@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "shotlab-theme";
+  var STORAGE_KEY = "ai-film-theme";
   var MODES = ["light", "dark"];
   var LABELS = { light: "浅色", dark: "深色" };
   var ICONS = {
@@ -49,6 +49,10 @@
       var nextMode = MODES[(MODES.indexOf(currentMode) + 1) % MODES.length];
       applyMode(nextMode, true);
     });
+  });
+
+  window.addEventListener("storage", function (event) {
+    if (event.key === STORAGE_KEY) applyMode(event.newValue, false);
   });
 
   applyMode(readMode(), false);
