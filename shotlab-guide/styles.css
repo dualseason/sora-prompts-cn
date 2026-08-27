@@ -31,49 +31,6 @@ body {
   font-size: 16px;
 }
 
-.shotlab-site-nav {
-  position: sticky;
-  top: 0;
-  z-index: 80;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 58px;
-  padding-inline: max(32px, calc((100vw - 1280px) / 2));
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid rgba(16, 17, 20, 0.08);
-  box-shadow: 0 1px 16px rgba(18, 24, 40, 0.04);
-  backdrop-filter: blur(18px);
-}
-
-.shotlab-site-brand {
-  color: #101114;
-  font-size: 22px;
-  font-weight: 820;
-  letter-spacing: -0.035em;
-  text-decoration: none;
-}
-
-.shotlab-site-links {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.shotlab-site-links a {
-  color: #4d5057;
-  font-size: 13px;
-  font-weight: 720;
-  text-decoration: none;
-  transition: color 160ms ease;
-}
-
-.shotlab-site-links a:hover,
-.shotlab-site-links a:focus-visible,
-.shotlab-site-links a.active {
-  color: #2f6df6;
-}
-
 button, input { font: inherit; }
 button { color: inherit; }
 img { display: block; max-width: 100%; }
@@ -806,13 +763,6 @@ main {
 }
 
 @media (max-width: 680px) {
-  .shotlab-site-nav {
-    height: 52px;
-    padding-inline: 17px;
-  }
-  .shotlab-site-brand { font-size: 19px; }
-  .shotlab-site-links { gap: 17px; }
-  .shotlab-site-links a { font-size: 12px; }
   main { padding-inline: 17px; }
   .quick-strip { padding-top: 38px; }
   .rules-grid { grid-template-columns: 1fr; }
@@ -1007,10 +957,6 @@ body {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-
-.shotlab-site-nav {
-  height: 58px;
 }
 
 button:focus-visible,
@@ -1341,41 +1287,7 @@ main {
   }
 }
 
-@media (max-width: 680px) {
-  .shotlab-site-nav {
-    height: 52px;
-  }
-}
-
-/* ShotLab appearance cycle button */
 html[data-theme="light"] { color-scheme: light; }
-
-.theme-picker-toggle {
-  display: inline-grid;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  place-items: center;
-  color: #4d5057;
-  background: #f1f2f4;
-  border: 1px solid rgba(16, 17, 20, 0.08);
-  border-radius: 9px;
-  flex: 0 0 auto;
-  cursor: pointer;
-}
-
-.theme-picker-toggle:hover,
-.theme-picker-toggle:focus-visible {
-  color: #2f6df6;
-  background: #e8eaf0;
-}
-
-.theme-picker-toggle img {
-  display: block;
-  width: 18px;
-  height: 18px;
-  opacity: 0.82;
-}
 
 /* 看懂镜头 dark appearance */
 html[data-theme="dark"] {
@@ -1398,32 +1310,6 @@ html[data-theme="dark"],
 html[data-theme="dark"] body {
   color: var(--ink);
   background: var(--paper);
-}
-
-html[data-theme="dark"] .shotlab-site-nav {
-  background: rgba(14, 16, 20, 0.92);
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 1px 18px rgba(0, 0, 0, 0.24);
-}
-
-html[data-theme="dark"] .shotlab-site-brand { color: #f4f6fa; }
-
-html[data-theme="dark"] .shotlab-site-links a,
-html[data-theme="dark"] .theme-picker-toggle { color: #b8bdc7; }
-
-html[data-theme="dark"] .theme-picker-toggle {
-  background: #20242c;
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-html[data-theme="dark"] .theme-picker-toggle img {
-  filter: invert(1);
-}
-
-html[data-theme="dark"] .theme-picker-toggle:hover,
-html[data-theme="dark"] .theme-picker-toggle:focus-visible {
-  color: #75a0ff;
-  background: #292e38;
 }
 
 html[data-theme="dark"] .sidebar {
@@ -1512,13 +1398,4 @@ html[data-theme="dark"] .definition { color: var(--ink); }
   .brand { margin-bottom: 0; }
   .search-box,
   .about-link { display: none; }
-  .shotlab-site-nav { padding-inline: 20px; }
-  .shotlab-site-brand { font-size: 22px; }
-  .shotlab-site-links > a:first-of-type { display: none; }
-  .shotlab-site-links { gap: 30px; }
-  .shotlab-site-links a { font-size: 13px; }
-  .theme-picker-toggle {
-    width: 30px;
-    height: 30px;
-  }
 }
