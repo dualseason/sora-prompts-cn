@@ -7,16 +7,10 @@
   <title>看懂镜头｜丧尸清道夫 AI 电影课</title>
   <link rel="stylesheet" href="./book.css?v=16">
   <style>
-    .shotlab-intro { width:min(1120px,calc(100% - 48px)); margin:0 auto; padding:28px 0 18px; }
-    .shotlab-intro-inner { display:flex; align-items:flex-start; justify-content:space-between; gap:28px; }
-    .shotlab-intro h1 { margin:0; color:var(--book-ink); font-family:"Noto Serif SC","Songti SC",serif; font-size:25px; line-height:1.5; }
-    .shotlab-intro p { max-width:760px; margin:6px 0 0; color:var(--book-muted); font-size:13px; line-height:1.8; }
-    .shotlab-open { flex:0 0 auto; padding:7px 14px; border:1px solid var(--book-line); border-radius:999px; color:var(--book-green); text-decoration:none; font-size:13px; }
-    .shotlab-open:hover { border-color:var(--book-green); }
-    .shotlab-frame-wrap { width:100%; height:calc(100vh - 154px); min-height:680px; border-top:1px solid var(--book-line); background:#f6f3ec; }
+    body { min-height:100vh; display:grid; grid-template-rows:auto minmax(0,1fr); }
+    .shotlab-frame-wrap { width:100%; min-height:0; background:#f6f3ec; }
     .shotlab-frame { display:block; width:100%; height:100%; border:0; }
     .shotlab-fallback { display:none; width:min(720px,calc(100% - 40px)); margin:70px auto; color:var(--book-muted); }
-    @media (max-width:800px) { .shotlab-intro { width:min(100% - 28px,1120px); padding:20px 0 14px; } .shotlab-intro-inner { display:block; } .shotlab-open { display:inline-block; margin-top:12px; } .shotlab-frame-wrap { height:calc(100vh - 190px); min-height:620px; } }
   </style>
 </head>
 <body>
@@ -24,10 +18,6 @@
     <a class="plain-brand" href="./">丧尸清道夫 AI 电影课</a>
     <nav><a href="./seedance-workflow.html">流程总览</a><a href="./course.html?doc=zombie-scavenger-shot-analysis.md">原片拉片</a><a href="./lens-guide.html">看懂镜头</a><button class="theme-toggle" data-theme-toggle type="button">切换暗色</button></nav>
   </div></header>
-  <section class="shotlab-intro"><div class="shotlab-intro-inner">
-    <div><h1>ShotLab · 看懂镜头</h1><p>下方为获得公开部署授权的本地集成版本，包含六类镜头语言、79 个术语、搜索、高清配图、21 段动态演示和详细识别规则。内容来源与版权归 ShotLab。</p></div>
-    <a class="shotlab-open" href="https://shotlab.cc/guide/" target="_blank" rel="noopener noreferrer">在 ShotLab 官网打开</a>
-  </div></section>
   <div class="shotlab-frame-wrap" id="shotlab-wrap">
     <iframe class="shotlab-frame" id="shotlab-frame" src="./shotlab-guide/" title="ShotLab 看懂镜头授权集成手册" loading="eager"></iframe>
     <div class="shotlab-fallback" id="shotlab-fallback"><h2>无法载入镜头手册</h2><p>请尝试刷新页面，或直接访问 <a href="https://shotlab.cc/guide/" target="_blank" rel="noopener noreferrer">ShotLab 官方看懂镜头手册</a>。</p></div>
