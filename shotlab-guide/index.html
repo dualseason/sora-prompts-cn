@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN" data-theme-choice="light" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="ShotLab 中文电影镜头语言参考手册授权集成版。">
+  <title>看懂镜头｜ShotLab 授权集成</title>
+  <script>(function(){try{var m=localStorage.getItem('shotlab-theme');if(['light','dark'].indexOf(m)<0)m='light';document.documentElement.dataset.themeChoice=m;document.documentElement.dataset.theme=m}catch(e){}})();</script>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./theme.js" defer></script>
+  <script src="./data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <nav class="shotlab-site-nav" aria-label="镜头手册主导航">
+    <a class="shotlab-site-brand" href="https://shotlab.cc/guide/" target="_blank" rel="noopener noreferrer">ShotLab</a>
+    <div class="shotlab-site-links">
+      <button class="theme-picker-toggle" type="button" data-theme-cycle aria-label="切换手册外观"><img data-theme-icon src="./theme-sun.svg" alt="" width="18" height="18"></button>
+      <a href="../">返回课程</a>
+      <a class="active" href="./" aria-current="page">看懂镜头</a>
+      <a href="https://shotlab.cc/guide/" target="_blank" rel="noopener noreferrer">官方原版</a>
+    </div>
+  </nav>
+  <noscript>本手册需要启用浏览器 JavaScript 才能搜索和点击。</noscript>
+  <div id="app" class="app-shell" aria-busy="true"></div>
+</body>
+</html>
