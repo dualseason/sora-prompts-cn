@@ -270,10 +270,6 @@ body.dark-theme .plain-header { background:var(--book-page) !important; }
 .container .prompt-tag { color:var(--book-rust) !important; font-weight:700 !important; }
 .container .prompt-description { color:var(--book-muted) !important; }
 .container .prompt-image { border-radius:3px !important; }
-.lens-card { padding:0 !important; box-shadow:none !important; border:1px solid var(--book-line) !important; background:transparent !important; }
-.lens-card h3 { margin:0 !important; padding:0 !important; border:0 !important; }
-body.dark-theme .lens-card { background:transparent !important; }
-body.dark-theme .lens-card img { opacity:.92; }
 
 footer { background: transparent !important; border-top: 1px solid var(--book-line) !important; color: var(--book-muted) !important; }
 
