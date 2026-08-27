@@ -919,6 +919,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "连续画面呈现自然、不规则的人体微动，或幕后资料能够确认摄影机由操作者直接支撑。",
       "shouldNot": "画面非常平稳且已知使用斯坦尼康或电动云台；车辆振动、后期抖动效果或单次碰撞也不能单独证明手持。",
       "image": "./images/movement-handheld.jpg",
+      "video": "./videos/movement-handheld.mp4"
     },
     {
       "id": "pan",
@@ -931,6 +932,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "查看视频后可确认摄影机底座或空间位置不变，仅水平改变镜头朝向；常用于跟随横向动作或逐步揭示场景。",
       "shouldNot": "整台摄影机沿左—右方向移动，近景掠过速度明显快于远景时，应标横向轨道移动；单张截图不能判断摇摄。",
       "image": "./images/movement-pan.jpg",
+      "video": "./videos/movement-pan.mp4"
     },
     {
       "id": "tilt",
@@ -943,6 +945,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "视频能确认摄影机底座不动，仅由下向上或由上向下改变镜头朝向，用于揭示高度或跟随垂直动作。",
       "shouldNot": "整台摄影机保持朝向并垂直升降时应标垂直升降；摄影机随吊臂划弧移动时应标摇臂或摄影吊车运动。",
       "image": "./images/movement-tilt.jpg",
+      "video": "./videos/movement-tilt.mp4"
     },
     {
       "id": "dolly-in",
@@ -955,6 +958,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "摄影机明确向主体或场景深处推进，需要检索进入空间、靠近人物或逐步强化注意的实体位移镜头。",
       "shouldNot": "摄影机位置不变、仅通过改变焦距放大主体时标变焦推进；数字裁切放大也不属于推轨。",
       "image": "./images/movement-dolly-in.jpg",
+      "video": "./videos/movement-dolly-in.mp4"
     },
     {
       "id": "dolly-out",
@@ -967,6 +971,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "摄影机明确后退以扩大场景、拉开人物距离或逐步揭示环境，且位移在连续画面中可确认。",
       "shouldNot": "摄影机位置不变、仅通过改变焦距扩大视野时标变焦拉远；人物自己远离摄影机也不是拉轨。",
       "image": "./images/movement-dolly-out.jpg",
+      "video": "./videos/movement-dolly-out.mp4"
     },
     {
       "id": "truck",
@@ -979,6 +984,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "视频明确显示摄影机沿侧向路径移动，需要检索横移揭示空间、与人物并行或利用前景视差的镜头。",
       "shouldNot": "摄影机只在固定支点上左右旋转时标水平摇摄；一般“跟拍”若路径并非明确横向，不应强行归入本标签。",
       "image": "./images/movement-truck.jpg",
+      "video": "./videos/movement-truck.mp4"
     },
     {
       "id": "zoom",
@@ -991,6 +997,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "能确认画面尺度变化来自变焦镜头，或需要统一检索所有不移动机位的连续焦距变化。",
       "shouldNot": "摄影机实体靠近、远离或横移造成的尺度和视差变化；后期单纯裁切若未纳入你的摄影标签范围，也不要标变焦。",
       "image": "./images/movement-zoom.jpg",
+      "video": "./videos/movement-zoom.mp4"
     },
     {
       "id": "steadicam",
@@ -1003,6 +1010,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "幕后资料、器材记录或明确的制作语境能够确认使用斯坦尼康系统；画面运动也符合身体承载稳定器的连续特征。",
       "shouldNot": "仅凭画面平稳就判定斯坦尼康；电动三轴云台、轨道车、机械臂和软件防抖都可能产生相似结果。",
       "image": "./images/movement-steadicam.jpg",
+      "video": "./videos/movement-steadicam.mp4"
     },
     {
       "id": "gimbal",
@@ -1015,6 +1023,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "器材信息或幕后画面确认使用电动云台，且其主动稳平或 Smooth Follow 特征参与了镜头运动。",
       "shouldNot": "仅因画面稳定就添加；斯坦尼康、光学防抖、轨道车或后期稳定也能获得平滑画面。",
       "image": "./images/movement-gimbal.jpg",
+      "video": "./videos/movement-gimbal.mp4"
     },
     {
       "id": "crane",
@@ -1027,6 +1036,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "镜头明确由大型升降臂、摄影吊车或可载人/远程摄影升降设备完成大范围空间移动。",
       "shouldNot": "摄影机沿立柱或升降平台作纯垂直直线移动时应标垂直升降；小型固定支点吊臂的短距离弧线运动优先标摇臂运动。",
       "image": "./images/movement-crane.jpg",
+      "video": "./videos/movement-crane.mp4"
     },
     {
       "id": "jib",
@@ -1039,6 +1049,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "幕后或运动路径能够确认摄影机随固定支点摇臂走弧线，常用于越过前景、抬升揭示或轻量俯冲。",
       "shouldNot": "摄影机沿纯垂直柱体上下移动；大型摄影吊车进行远距离复合移动时应标摄影吊车运动。",
       "image": "./images/movement-jib.jpg",
+      "video": "./videos/movement-jib.mp4"
     },
     {
       "id": "drone",
@@ -1051,6 +1062,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "器材资料或画面空间路径能够可靠确认无人机承载摄影机完成连续空中移动。",
       "shouldNot": "所有高空或鸟瞰镜头都标无人机；直升机、固定翼飞机、缆索、吊车和高楼固定机位都可能产生空中视点。",
       "image": "./images/movement-drone.jpg",
+      "video": "./videos/movement-drone.mp4"
     },
     {
       "id": "static",
@@ -1063,6 +1075,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "查看完整片段后确认没有 Pan、Tilt、Roll、位移或 Zoom，需要检索锁定画框中的表演和调度。",
       "shouldNot": "短暂静止只是运动镜头的起点、终点或停顿；画面发生缓慢推近、稳定器漂移或后期数字缩放时也不是固定镜头。",
       "image": "./images/movement-static.jpg",
+      "video": "./videos/movement-static.mp4",
       "badge": "补充标签"
     },
     {
@@ -1076,6 +1089,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "镜头的主要运动逻辑是跟随移动人物、车辆或物体，并在一段时间内保持其为稳定叙事中心。",
       "shouldNot": "主体静止而摄影机自行横移或环绕；只在固定机位上用 Pan 跟随主体时，优先标水平摇摄而不是空间跟拍。",
       "image": "./images/movement-tracking.jpg",
+      "video": "./videos/movement-tracking.mp4",
       "badge": "补充标签"
     },
     {
@@ -1089,6 +1103,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "摄影机围绕人物、物体或群体走弧线，需要检索逐步改变观看方位和背景关系的镜头。",
       "shouldNot": "摄影机固定、主体自己旋转；或只是横向 Truck 加轻微修正，未形成明确围绕主体的曲线路径。",
       "image": "./images/movement-orbit.jpg",
+      "video": "./videos/movement-orbit.mp4",
       "badge": "补充标签"
     },
     {
@@ -1102,6 +1117,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "镜头从一个人物或区域迅速甩向另一个目标，并以明显横向模糊完成转场、揭示或能量强调。",
       "shouldNot": "摄影机沿轨道高速侧移、主体快速经过固定镜头，或后期单独添加横向模糊；这些不等于甩镜。",
       "image": "./images/movement-whip-pan.jpg",
+      "video": "./videos/movement-whip-pan.mp4",
       "badge": "补充标签"
     },
     {
@@ -1115,6 +1131,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "视频明确显示摄影机整体向上或向下平移，需要检索从较低观察高度转换到较高观察高度的镜头。",
       "shouldNot": "摄影机固定只抬头或低头时标 Tilt；路径明显围绕摇臂支点划弧时标 Jib，范围很大的复合升降则标 Crane。",
       "image": "./images/movement-pedestal.jpg",
+      "video": "./videos/movement-pedestal.mp4",
       "badge": "补充标签"
     },
     {
@@ -1128,6 +1145,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "能确认摄影机没有靠近主体，而是通过镜头焦距变化从较宽画面连续推进到较紧画面。",
       "shouldNot": "前景掠过、遮挡关系和透视随观察点前移而改变时，应标 Dolly In；后期数字裁切需按你的元数据范围另行处理。",
       "image": "./images/movement-zoom-in.jpg",
+      "video": "./videos/movement-zoom-in.mp4",
       "badge": "补充标签"
     },
     {
@@ -1141,6 +1159,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "能确认摄影机没有后退，而是通过焦距变化从紧画面连续拉到更宽的场景。",
       "shouldNot": "摄影机实体后移，近景较快缩小、退出画框并产生新视差时，应标 Dolly Out；人物自己远离摄影机也不是 Zoom Out。",
       "image": "./images/movement-zoom-out.jpg",
+      "video": "./videos/movement-zoom-out.mp4",
       "badge": "补充标签"
     },
     {
@@ -1154,6 +1173,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "主体尺寸被有意维持，而背景的相对尺度、可见范围与空间透视持续改变；需要检索 Vertigo effect、Hitchcock zoom 等镜头。",
       "shouldNot": "普通推轨同时自动变焦但主体尺寸仍明显改变；单纯 Zoom、数码缩放或仅有背景运动都不是推拉变焦。",
       "image": "./images/movement-dolly-zoom.jpg",
+      "video": "./videos/movement-dolly-zoom.mp4",
       "badge": "补充标签"
     },
     {
@@ -1167,6 +1187,7 @@ window.SHOT_GUIDE_DATA = {
       "should": "视频明确显示画框绕中心光轴持续旋转，需要检索翻转、失重感或方向重置式摄影机运动。",
       "shouldNot": "画面从头到尾固定倾斜却没有旋转过程时只标荷兰角；主体旋转或背景物体转动也不能代替摄影机横滚。",
       "image": "./images/movement-roll.jpg",
+      "video": "./videos/movement-roll.mp4",
       "badge": "补充标签"
     }
   ],
