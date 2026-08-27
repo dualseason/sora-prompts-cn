@@ -50,7 +50,7 @@
       th, td { padding:8px; }
     }
   </style>
-  <link rel="stylesheet" href="./book.css?v=11">
+  <link rel="stylesheet" href="./book.css?v=12">
 </head>
 <body>
   <header class="plain-header"><div class="plain-header-inner">
@@ -108,6 +108,22 @@
         });
         toc.appendChild(link);
       });
+      if (doc === 'zombie-scavenger-shot-analysis.md') {
+        document.querySelectorAll('#content tbody tr').forEach(function (row) {
+          var cells = row.querySelectorAll('td');
+          if (cells.length < 4 || !/^\d+$/.test(cells[0].textContent.trim())) return;
+          var number = Number(cells[0].textContent.trim());
+          if (number < 1 || number > 80) return;
+          row.closest('table').classList.add('shot-analysis-table');
+          var image = document.createElement('img');
+          image.className = 'shot-row-image';
+          image.loading = 'lazy';
+          image.decoding = 'async';
+          image.src = './images/shot-analysis/shots/shot-' + String(number).padStart(3, '0') + '.webp';
+          image.alt = '《丧尸清道夫》镜头 ' + number + ' 代表帧';
+          cells[2].prepend(image);
+        });
+      }
     }).catch(function () {
       document.getElementById('content').innerHTML = '<p>课程加载失败，请直接打开 <a href="./' + doc + '">' + doc + '</a>。</p>';
     });

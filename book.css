@@ -102,6 +102,11 @@ nav a:hover { color: var(--book-green) !important; }
 .shot-analysis-frame { margin:20px 0 28px; }
 .shot-analysis-frame img { display:block; width:100%; max-width:720px; aspect-ratio:2.33/1; object-fit:cover; border:1px solid var(--book-line); }
 .shot-analysis-frame figcaption { margin-top:7px; color:var(--book-muted); font-size:12px; }
+.shot-analysis-table th:first-child,
+.shot-analysis-table td:first-child { width:44px; }
+.shot-analysis-table th:nth-child(2),
+.shot-analysis-table td:nth-child(2) { width:112px; }
+.shot-row-image { display:block; width:100%; max-width:360px; margin:0 0 10px; aspect-ratio:2.33/1; object-fit:cover; border:1px solid var(--book-line); background:#111; }
 
 .book-hero,
 .course-head,
@@ -270,4 +275,8 @@ footer { background: transparent !important; border-top: 1px solid var(--book-li
   .theme-toggle { padding:6px 9px; }
   .official-video-inner { width:min(100% - 28px,920px); padding:22px 0; }
   .official-video-frame { aspect-ratio:16/9; }
+  .shot-analysis-table th:first-child,
+  .shot-analysis-table td:first-child { width:32px; }
+  .shot-analysis-table th:nth-child(2),
+  .shot-analysis-table td:nth-child(2) { width:74px; }
 }
